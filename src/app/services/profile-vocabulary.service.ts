@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { SearchFlightDto, Passenger, SearchResult, City } from 'h21-be-ui-kit';
 
 @Injectable()
-export class PrototypeVocabularyService implements VocabularyService {
+export class ProfileVocabularyService implements VocabularyService {
 
 	constructor(private _http: HttpClient) {
 	}

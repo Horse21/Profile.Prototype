@@ -3,7 +3,7 @@ import { AuthData } from 'app/dto/auth-data';
 import { PermissionService } from 'h21-be-ui-kit';
 
 @Injectable()
-export class PrototypePermissionService implements PermissionService {
+export class ProfilePermissionService implements PermissionService {
 	private authData: AuthData;
 
 	constructor() {

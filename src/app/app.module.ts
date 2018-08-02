@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NouisliderModule } from 'ng2-nouislider';
-import { PrototypePermissionService } from '../app/services/prototype-permission-service';
-import { PrototypeVocabularyService } from '../app/services/prototype-vocabulary-service';
+import { ProfilePermissionService } from './services/profile-permission.service';
+import { ProfileVocabularyService } from './services/profile-vocabulary.service';
 import { PermissionService } from 'h21-be-ui-kit';
 import { MatInputModule, MatNativeDateModule } from '@angular/material';
 import { VocabularyService } from 'h21-be-ui-kit';
@@ -45,11 +45,11 @@ const routes: Routes = [
 		providers: [
 			{
 				provide: PermissionService,
-				useClass: PrototypePermissionService
+				useClass: ProfilePermissionService
 			},
 			{
 				provide: VocabularyService,
-				useClass: PrototypeVocabularyService
+				useClass: ProfileVocabularyService
 			},
 			H21RightOverlayPanelService,
 			AppSubscriberService,
