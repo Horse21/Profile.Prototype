@@ -29,6 +29,7 @@ const routes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
+	{ path: 'demo/dashboard', component: DashboardComponent },
 	{path: '**', redirectTo: '/'},
 ];
 
