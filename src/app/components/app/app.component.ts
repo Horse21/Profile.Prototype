@@ -8,6 +8,7 @@ import { H21SidebarComponent } from 'h21-be-ui-kit';
 import { H21TopToolbarComponent } from 'h21-be-ui-kit';
 import { H21RightOverlayPanelService } from 'h21-be-ui-kit';
 import { AuthData } from '../../dto/auth-data';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ export class AppComponent {
 		iconReg: MatIconRegistry,
 		sanitizer: DomSanitizer,
 		private http: HttpClient,
+		private router: Router,
 		permissionService: PermissionService,
 		private rightPanelDialog: H21RightOverlayPanelService
 	) {
@@ -69,5 +71,9 @@ export class AppComponent {
 
 	openHelpSection(): void {
 		this.rightPanelDialog.open('h21-help');
+	}
+
+	isDemo(): boolean {
+		return this.router.url.indexOf('/demo') == 0;
 	}
 }
