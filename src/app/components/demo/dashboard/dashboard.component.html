@@ -74,21 +74,19 @@
 			</div>
 		</div>
 	</div>
-	<div class="c-h21-dashboard-widget __huge">
-		<div class="c-h21-dashboard-widget-title">
-			{{title}}
-		</div>
-	</div>
 
 	<div class="c-h21-dashboard-widget __large">
 		<div class="c-h21-dashboard-widget-title">
-			{{title}}
+			Statistic
 		</div>
-	</div>
-
-	<div class="c-h21-dashboard-widget __large">
-		<div class="c-h21-dashboard-widget-title">
-			{{title}}
+		<div class="c-h21-dashboard-widget-content">
+			<canvas baseChart
+					[data]="lineChartData"
+					[labels]="lineChartLabels"
+					[options]="lineChartOptions"
+					[chartType]="lineChartType"
+					(chartHover)="chartHovered($event)"
+					(chartClick)="chartClicked($event)"></canvas>
 		</div>
 	</div>
 

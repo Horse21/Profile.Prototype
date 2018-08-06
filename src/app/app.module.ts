@@ -24,6 +24,7 @@ import { H21ProfileUserCardComponent } from './components/profile/h21-profile-us
 import { ProfileUserCardDemoComponent } from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
 import { DemoComponent } from './components/demo/demo/demo.component';
 import { DashboardComponent } from './components/demo/dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts';
 
 const routes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
@@ -54,7 +55,8 @@ const routes: Routes = [
 			NouisliderModule,
 			H21HeaderModule,
 			H21SidebarModule,
-			H21TopToolbarModule
+			H21TopToolbarModule,
+			ChartsModule
 		],
 		providers: [
 			{
