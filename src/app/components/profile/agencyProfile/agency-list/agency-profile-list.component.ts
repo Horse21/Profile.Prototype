@@ -10,18 +10,19 @@ import { IAgencyProfileListDto } from 'app/dto/profile/i-agency-profile-list-dto
 })
 export class AgencyProfileListComponent implements OnInit {
 	dataSource: IAgencyProfileListDto[];
-	
-	displayedColumns: string[] = ['name'];
-	
+
+	displayedColumns: string[] = ['logo', 'name', 'type', 'createDate', 'updateDate', 'stateId', 'action'];
+
 	constructor(protected httpClient: FakeHttpClientService,
 				protected vocabulary: ProfileVocabularyService) {
 	}
-	
+
 	ngOnInit() {
-		
+
 		this.httpClient.postQueryAgencyProfile()
 		.subscribe(e => {
 			this.dataSource = e;
+			this.dataSource.forEach(x => x.type = 'Regional');
 			this.httpClient.setUpdateDate(this.dataSource);
 		});
 	}

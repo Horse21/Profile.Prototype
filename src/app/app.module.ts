@@ -35,8 +35,8 @@ import { TravelerProfileComponent } from './components/profile/travelerProfile/t
 import { TravelerProfileListComponent } from './components/profile/travelerProfile/traveler-profile-list/traveler-profile-list.component';
 import { ProviderProfileComponent } from './components/profile/providerProfile/provider-profile/provider-profile.component';
 import { ProviderProfileListComponent } from './components/profile/providerProfile/provider-profile-list/provider-profile-list.component';
-import { AgencyProfileListComponent } from './components/demo/agency-list/agency-profile-list.component';
-import { AgencyProfileComponent } from './components/demo/agency-profile/agency-profile.component';
+import { AgencyProfileListComponent } from './components/profile/agencyProfile/agency-list/agency-profile-list.component';
+import { AgencyProfileComponent } from './components/profile/agencyProfile/agency-profile/agency-profile.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
