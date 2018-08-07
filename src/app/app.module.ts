@@ -31,7 +31,7 @@ const routes: Routes = [
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
 	{ path: 'demo/dashboard', component: DashboardComponent },
-	{path: '**', redirectTo: '/'},
+	{ path: '**', redirectTo: 'demo/dashboard' }
 ];
 
 @NgModule({
