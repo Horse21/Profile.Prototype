@@ -1,21 +1,20 @@
-import {Injectable} from '@angular/core';
-import {IUserProfileDto} from "../dto/profile/i-user-profile-dto";
-import {IUserProfileListDto} from "../dto/profile/i-user-profile-list-dto";
-import {Observable} from "rxjs/internal/Observable";
-import {of as observableOf} from 'rxjs';
-import {IAgentProfileDto} from "../dto/profile/i-agent-profile-dto";
-import {IAgentProfileListDto} from "../dto/profile/i-agent-profile-list-dto";
-import {IAgencyProfileDto} from "../dto/profile/i-agency-profile-dto";
-import {IAgencyProfileListDto} from "../dto/profile/i-agency-profile-list-dto";
-import {IHorseCompanyListDto} from "../dto/profile/i-horse-company-list-dto";
-import {IHorseCompanyDto} from "../dto/profile/i-horse-company-dto";
-import {History} from "../components/profile/h21-profile-user-card/h21-profile-user-card.component";
-import {IHistory} from "../dto/i-history";
-import {IFolder} from "../dto/i-folder";
-import {IClaim} from "../dto/i-claim";
-import {IUserLink} from "../dto/i-user-link";
-import {ITravelerProfileDto} from "../dto/profile/i-traveler-profile-dto";
-import {ITravelerProfileListDto} from "../dto/profile/i-traveler-profile-list-dto";
+import { Injectable } from '@angular/core';
+import { IUserProfileDto } from '../dto/profile/i-user-profile-dto';
+import { IUserProfileListDto } from '../dto/profile/i-user-profile-list-dto';
+import { Observable } from 'rxjs/internal/Observable';
+import { of as observableOf } from 'rxjs';
+import { IAgentProfileDto } from '../dto/profile/i-agent-profile-dto';
+import { IAgentProfileListDto } from '../dto/profile/i-agent-profile-list-dto';
+import { IAgencyProfileDto } from '../dto/profile/i-agency-profile-dto';
+import { IAgencyProfileListDto } from '../dto/profile/i-agency-profile-list-dto';
+import { IHorseCompanyListDto } from '../dto/profile/i-horse-company-list-dto';
+import { IHorseCompanyDto } from '../dto/profile/i-horse-company-dto';
+import { IHistory } from '../dto/i-history';
+import { IFolder } from '../dto/i-folder';
+import { IClaim } from '../dto/i-claim';
+import { IUserLink } from '../dto/i-user-link';
+import { ITravelerProfileDto } from '../dto/profile/i-traveler-profile-dto';
+import { ITravelerProfileListDto } from '../dto/profile/i-traveler-profile-list-dto';
 
 declare var require: any;
 
@@ -146,7 +145,7 @@ export class FakeHttpClientService {
 
 	setUpdateDate(arr: any[]): void {
 		arr.forEach(x => {
-			var date = new Date();
+			const date = new Date();
 			date.setDate(new Date(x.createDate.date).getDate() + 1);
 			x.updateDate = {
 				date: date.toDateString(),

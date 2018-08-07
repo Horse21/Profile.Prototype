@@ -78,4 +78,8 @@ export class AppComponent {
 	isDemo(): boolean {
 		return this.router.url.indexOf('/demo') == 0;
 	}
+
+	isRoute(route: string){
+		return this.router.url.indexOf(route) >= 0;
+	}
 }

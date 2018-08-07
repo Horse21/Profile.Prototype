@@ -17,7 +17,7 @@
 		<!--<div class="col-12 no-gutters __has-expanded-sidebar"> - меняем класс на __has-expanded-sidebar, если панель нафигации раскрыиа  -->
 		<div class="col-12 no-gutters __has-sidebar">
 			<nav class="sidebar_nav">
-				<a mat-button [routerLink]="['/dashboard']" class="is-active">
+				<a mat-button [routerLink]="['/dashboard']" [class.is-active]="isRoute('dashboard')">
 					<mat-icon>apps</mat-icon>
 					<span>Board</span>
 				</a>
@@ -25,9 +25,13 @@
 					<mat-icon>domain</mat-icon>
 					<span>TMC</span>
 				</a>
-				<a mat-button [routerLink]="['/users']">
+				<a mat-button [routerLink]="['/users']" [class.is-active]="isRoute('users')">
 					<mat-icon>person</mat-icon>
 					<span>Users</span>
+				</a>
+				<a mat-button [routerLink]="['/agencies']">
+					<mat-icon>work</mat-icon>
+					<span>Agencies</span>
 				</a>
 			</nav>
 			<!--<nav class="sidebar_expand_nav">-->

@@ -1,12 +1,11 @@
-import {Injectable} from '@angular/core';
-import { filter } from 'rxjs/operators';
-import {Observable} from 'rxjs';
-import {City, VocabularyService} from "h21-be-ui-kit";
-import {HttpClient} from "@angular/common/http";
-import {Passenger} from "h21-be-ui-kit/dto/passenger";
-import {SearchFlightDto} from "h21-be-ui-kit/dto/search-flight-dto";
-import {SearchResult} from "h21-be-ui-kit/dto/search-result";
-import { of as observableOf } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable, of as observableOf } from 'rxjs';
+import { City, VocabularyService } from 'h21-be-ui-kit';
+import { HttpClient } from '@angular/common/http';
+import { Passenger } from 'h21-be-ui-kit/dto/passenger';
+import { SearchFlightDto } from 'h21-be-ui-kit/dto/search-flight-dto';
+import { SearchResult } from 'h21-be-ui-kit/dto/search-result';
+
 declare var require: any;
 
 @Injectable({
@@ -333,6 +332,10 @@ export class ProfileVocabularyService implements VocabularyService {
 
 	public getLanguages(): Observable<any[]> {
 		return this._http.get<City[]>("../../assets/prototype-storage/Languages.json");
+	}
+	
+	public getCurrencies(): Observable<any[]> {
+		return this._http.get<any[]>('../../assets/prototype-storage/Currencies.json');
 	}
 
 	searchFlights(options: SearchFlightDto): Observable<SearchResult>{
