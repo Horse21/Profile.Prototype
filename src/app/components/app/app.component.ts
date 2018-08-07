@@ -95,7 +95,7 @@ export class AppComponent {
 			'providers',
 			'agentProfile',
 			'travelerProfile',
-			'agencyProfile',
+			'agencies',
 			'providerProfile']);
 	}
 }

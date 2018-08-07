@@ -1,3 +1,6 @@
+.page_box .page_content-box .__has-sidebar {
+	transition: padding-left 150ms;
+}
 .page_box .page_content-box .__has-expanded-sidebar {
 	padding-left: 345px !important;
 }
@@ -9,22 +12,38 @@
 	height: 100%;
 	background-color: #faf9f9;
 	top: 0;
-	left: 65px;
+	left: -355px;
+	transition: left 150ms;
 
-	a {
+	&.__is-active {
+		left: 65px;
+	}
+
+	.mat-button {
 		color: #4f5a7c;
 		display: block;
 		text-decoration: none;
 		padding: 14px;
 		font-size: 16px;
 		border-bottom: 1px solid #dddddd;
-	}
-	a:hover {
-		color: #4f5a7c;
-	}
-	a.__is-selected {
-		color: white;
-		background-color: #0044d6;
+		text-align: left;
+		line-height: normal;
+
+		.mat-button-focus-overlay {
+			background: none;
+		}
+
+		&.__is-active {
+			color: white;
+			background-color: #0044d6;
+
+			.mat-ripple {
+				.mat-ripple-element {
+					background-color: white;
+					opacity: 0.1;
+				}
+			}
+		}
 	}
 }
 
