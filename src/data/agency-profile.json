@@ -1,0 +1,655 @@
+[
+  {
+    "id": 1,
+    "name": "Quordate Agency",
+    "code": "QuordateAgencyCode",
+    "description": "Velit enim magna magna aliqua cupidatat in ipsum aute.",
+    "additionalIdentifier": "QuordateAgencyCodeAdditional",
+    "entityState": 3,
+    "entityRefId": 8,
+    "stateId": 1,
+    "createDate": {
+      "date": "2018-01-08",
+      "time": "06:05:14",
+      "year": 2018,
+      "month": 1,
+      "day": 8,
+      "hour": 6,
+      "minute": 5,
+      "second": 14
+    },
+    "legalName": "",
+    "vatNumber": "5b6855ca553f81fdfdb0a9b1",
+    "companyRegistrationNumber": 83590519,
+    "companyTypeId": "",
+    "website": "enthaze.com",
+    "email": "info@centree.tv",
+    "phone": "+7 (997) 476-39-65",
+    "fax": "(913) 440-28-98",
+    "countryCode": "LK",
+    "cityCode": "VER",
+    "address": "Titanic, Miller Place 2022",
+    "postcode": 76493,
+    "currencyCode": "RUB",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 7,
+        "specialityId": 6,
+        "specialityName": "Lorem"
+      },
+      {
+        "agencyId": 3,
+        "specialityId": 2,
+        "specialityName": "dolor"
+      },
+      {
+        "agencyId": 10,
+        "specialityId": 9,
+        "specialityName": "quis"
+      },
+      {
+        "agencyId": 7,
+        "specialityId": 3,
+        "specialityName": "officia"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 2,
+        "specialityName": "ut"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 6,
+        "specialityName": "enim"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-05-15",
+      "time": "16:12:18",
+      "year": 2018,
+      "month": 5,
+      "day": 15,
+      "hour": 16,
+      "minute": 12,
+      "second": 18
+    }
+  },
+  {
+    "id": 2,
+    "name": "Insurity Agency",
+    "code": "InsurityAgencyCode",
+    "description": "Velit dolor ut Lorem qui velit ea ipsum minim veniam est culpa id.",
+    "additionalIdentifier": "InsurityAgencyCodeAdditional",
+    "entityState": 4,
+    "entityRefId": 23,
+    "stateId": 5,
+    "createDate": {
+      "date": "2018-05-13",
+      "time": "02:28:59",
+      "year": 2018,
+      "month": 5,
+      "day": 13,
+      "hour": 2,
+      "minute": 28,
+      "second": 59
+    },
+    "legalName": "",
+    "vatNumber": "5b6855ca2b8eebb9cfd749e6",
+    "companyRegistrationNumber": 31074478,
+    "companyTypeId": "",
+    "website": "plutorque.com",
+    "email": "info@hatology.us",
+    "phone": "+380 (834) 478-31-44",
+    "fax": "(870) 571-25-95",
+    "countryCode": "TR",
+    "cityCode": "ABI",
+    "address": "Barclay, Stewart Street 606",
+    "postcode": 27493,
+    "currencyCode": "CAN",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 10,
+        "specialityId": 7,
+        "specialityName": "ea"
+      },
+      {
+        "agencyId": 4,
+        "specialityId": 10,
+        "specialityName": "culpa"
+      },
+      {
+        "agencyId": 6,
+        "specialityId": 4,
+        "specialityName": "ea"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 9,
+        "specialityName": "duis"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 6,
+        "specialityName": "do"
+      },
+      {
+        "agencyId": 4,
+        "specialityId": 3,
+        "specialityName": "adipisicing"
+      },
+      {
+        "agencyId": 7,
+        "specialityId": 1,
+        "specialityName": "nostrud"
+      },
+      {
+        "agencyId": 10,
+        "specialityId": 8,
+        "specialityName": "irure"
+      },
+      {
+        "agencyId": 3,
+        "specialityId": 7,
+        "specialityName": "quis"
+      },
+      {
+        "agencyId": 4,
+        "specialityId": 10,
+        "specialityName": "ad"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-03-28",
+      "time": "04:53:27",
+      "year": 2018,
+      "month": 3,
+      "day": 28,
+      "hour": 4,
+      "minute": 53,
+      "second": 27
+    }
+  },
+  {
+    "id": 3,
+    "name": "Sensate Agency",
+    "code": "SensateAgencyCode",
+    "description": "Sint laboris officia labore ea ex incididunt excepteur mollit fugiat commodo occaecat enim nostrud reprehenderit.",
+    "additionalIdentifier": "SensateAgencyCodeAdditional",
+    "entityState": 1,
+    "entityRefId": 2,
+    "stateId": 3,
+    "createDate": {
+      "date": "2018-04-10",
+      "time": "13:48:55",
+      "year": 2018,
+      "month": 4,
+      "day": 10,
+      "hour": 13,
+      "minute": 48,
+      "second": 55
+    },
+    "legalName": "",
+    "vatNumber": "5b6855ca9e3b7ec8006969bb",
+    "companyRegistrationNumber": 62960054,
+    "companyTypeId": "",
+    "website": "cormoran.com",
+    "email": "info@memora.info",
+    "phone": "+44 (921) 594-30-09",
+    "fax": "(981) 463-37-17",
+    "countryCode": "AU",
+    "cityCode": "RUT",
+    "address": "Gilgo, Crown Street 1165",
+    "postcode": 63350,
+    "currencyCode": "JPY",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 6,
+        "specialityId": 7,
+        "specialityName": "voluptate"
+      },
+      {
+        "agencyId": 3,
+        "specialityId": 3,
+        "specialityName": "ullamco"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 8,
+        "specialityName": "dolore"
+      },
+      {
+        "agencyId": 8,
+        "specialityId": 9,
+        "specialityName": "enim"
+      },
+      {
+        "agencyId": 10,
+        "specialityId": 5,
+        "specialityName": "velit"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-03-11",
+      "time": "20:07:12",
+      "year": 2018,
+      "month": 3,
+      "day": 11,
+      "hour": 20,
+      "minute": 7,
+      "second": 12
+    }
+  },
+  {
+    "id": 4,
+    "name": "Inrt Agency",
+    "code": "InrtAgencyCode",
+    "description": "Et elit aute incididunt dolore proident fugiat dolor elit officia adipisicing ut eiusmod voluptate labore.",
+    "additionalIdentifier": "InrtAgencyCodeAdditional",
+    "entityState": 3,
+    "entityRefId": 26,
+    "stateId": 2,
+    "createDate": {
+      "date": "2018-05-27",
+      "time": "03:53:13",
+      "year": 2018,
+      "month": 5,
+      "day": 27,
+      "hour": 3,
+      "minute": 53,
+      "second": 13
+    },
+    "legalName": "",
+    "vatNumber": "5b6855caa9b90b0eee2c8d2f",
+    "companyRegistrationNumber": 82061461,
+    "companyTypeId": "",
+    "website": "musix.com",
+    "email": "info@atomica.com",
+    "phone": "+380 (811) 475-29-14",
+    "fax": "(863) 507-38-22",
+    "countryCode": "ZR",
+    "cityCode": "COU",
+    "address": "Elizaville, Robert Street 2683",
+    "postcode": 93042,
+    "currencyCode": "USD",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 3,
+        "specialityId": 6,
+        "specialityName": "officia"
+      },
+      {
+        "agencyId": 10,
+        "specialityId": 8,
+        "specialityName": "ex"
+      },
+      {
+        "agencyId": 4,
+        "specialityId": 8,
+        "specialityName": "adipisicing"
+      },
+      {
+        "agencyId": 4,
+        "specialityId": 10,
+        "specialityName": "esse"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 1,
+        "specialityName": "aliqua"
+      },
+      {
+        "agencyId": 1,
+        "specialityId": 3,
+        "specialityName": "sint"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 5,
+        "specialityName": "exercitation"
+      },
+      {
+        "agencyId": 1,
+        "specialityId": 5,
+        "specialityName": "ullamco"
+      },
+      {
+        "agencyId": 10,
+        "specialityId": 3,
+        "specialityName": "excepteur"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-07-25",
+      "time": "15:21:08",
+      "year": 2018,
+      "month": 7,
+      "day": 25,
+      "hour": 15,
+      "minute": 21,
+      "second": 8
+    }
+  },
+  {
+    "id": 5,
+    "name": "Tubalum Agency",
+    "code": "TubalumAgencyCode",
+    "description": "Nulla enim eiusmod velit mollit.",
+    "additionalIdentifier": "TubalumAgencyCodeAdditional",
+    "entityState": 3,
+    "entityRefId": 3,
+    "stateId": 1,
+    "createDate": {
+      "date": "2018-04-05",
+      "time": "15:25:50",
+      "year": 2018,
+      "month": 4,
+      "day": 5,
+      "hour": 15,
+      "minute": 25,
+      "second": 50
+    },
+    "legalName": "",
+    "vatNumber": "5b6855cab36c02d3eb3d3c60",
+    "companyRegistrationNumber": 11211569,
+    "companyTypeId": "",
+    "website": "duflex.com",
+    "email": "info@quiltigen.net",
+    "phone": "+44 (951) 461-34-24",
+    "fax": "(819) 521-31-06",
+    "countryCode": "IT",
+    "cityCode": "SPA",
+    "address": "Greenbush, Lott Street 2721",
+    "postcode": 58302,
+    "currencyCode": "USD",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 1,
+        "specialityId": 8,
+        "specialityName": "aliquip"
+      },
+      {
+        "agencyId": 1,
+        "specialityId": 3,
+        "specialityName": "fugiat"
+      },
+      {
+        "agencyId": 2,
+        "specialityId": 1,
+        "specialityName": "magna"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 2,
+        "specialityName": "ipsum"
+      },
+      {
+        "agencyId": 3,
+        "specialityId": 9,
+        "specialityName": "tempor"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-05-09",
+      "time": "23:16:36",
+      "year": 2018,
+      "month": 5,
+      "day": 9,
+      "hour": 23,
+      "minute": 16,
+      "second": 36
+    }
+  },
+  {
+    "id": 6,
+    "name": "Vortexaco Agency",
+    "code": "VortexacoAgencyCode",
+    "description": "Ad sunt sunt reprehenderit fugiat cillum officia duis in exercitation voluptate.",
+    "additionalIdentifier": "VortexacoAgencyCodeAdditional",
+    "entityState": 4,
+    "entityRefId": 6,
+    "stateId": 5,
+    "createDate": {
+      "date": "2018-06-28",
+      "time": "06:28:20",
+      "year": 2018,
+      "month": 6,
+      "day": 28,
+      "hour": 6,
+      "minute": 28,
+      "second": 20
+    },
+    "legalName": "",
+    "vatNumber": "5b6855ca45fdb9c7bf14453c",
+    "companyRegistrationNumber": 97759637,
+    "companyTypeId": "",
+    "website": "letpro.com",
+    "email": "info@concility.me",
+    "phone": "+380 (821) 465-37-64",
+    "fax": "(817) 562-25-08",
+    "countryCode": "LC",
+    "cityCode": "BLU",
+    "address": "Brandywine, Pooles Lane 536",
+    "postcode": 71816,
+    "currencyCode": "THB",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 2,
+        "specialityId": 7,
+        "specialityName": "reprehenderit"
+      },
+      {
+        "agencyId": 2,
+        "specialityId": 9,
+        "specialityName": "minim"
+      },
+      {
+        "agencyId": 4,
+        "specialityId": 4,
+        "specialityName": "laborum"
+      },
+      {
+        "agencyId": 1,
+        "specialityId": 6,
+        "specialityName": "incididunt"
+      },
+      {
+        "agencyId": 8,
+        "specialityId": 4,
+        "specialityName": "in"
+      },
+      {
+        "agencyId": 1,
+        "specialityId": 1,
+        "specialityName": "nostrud"
+      },
+      {
+        "agencyId": 3,
+        "specialityId": 7,
+        "specialityName": "incididunt"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-06-26",
+      "time": "23:43:29",
+      "year": 2018,
+      "month": 6,
+      "day": 26,
+      "hour": 23,
+      "minute": 43,
+      "second": 29
+    }
+  },
+  {
+    "id": 7,
+    "name": "Qaboos Agency",
+    "code": "QaboosAgencyCode",
+    "description": "Officia proident ea est consectetur velit nostrud ea consequat.",
+    "additionalIdentifier": "QaboosAgencyCodeAdditional",
+    "entityState": 1,
+    "entityRefId": 2,
+    "stateId": 2,
+    "createDate": {
+      "date": "2018-05-08",
+      "time": "04:15:15",
+      "year": 2018,
+      "month": 5,
+      "day": 8,
+      "hour": 4,
+      "minute": 15,
+      "second": 15
+    },
+    "legalName": "",
+    "vatNumber": "5b6855ca10eef58801f8348f",
+    "companyRegistrationNumber": 45799916,
+    "companyTypeId": "",
+    "website": "dragbot.com",
+    "email": "info@housedown.biz",
+    "phone": "+7 (801) 557-25-33",
+    "fax": "(839) 408-28-29",
+    "countryCode": "MS",
+    "cityCode": "MAD",
+    "address": "Lopezo, Broome Street 2853",
+    "postcode": 66695,
+    "currencyCode": "THB",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 4,
+        "specialityId": 3,
+        "specialityName": "aute"
+      },
+      {
+        "agencyId": 7,
+        "specialityId": 4,
+        "specialityName": "ad"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 1,
+        "specialityName": "officia"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 1,
+        "specialityName": "ut"
+      },
+      {
+        "agencyId": 2,
+        "specialityId": 8,
+        "specialityName": "magna"
+      },
+      {
+        "agencyId": 8,
+        "specialityId": 7,
+        "specialityName": "est"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 4,
+        "specialityName": "esse"
+      },
+      {
+        "agencyId": 2,
+        "specialityId": 1,
+        "specialityName": "ea"
+      },
+      {
+        "agencyId": 3,
+        "specialityId": 2,
+        "specialityName": "ea"
+      },
+      {
+        "agencyId": 8,
+        "specialityId": 10,
+        "specialityName": "cillum"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-05-22",
+      "time": "23:57:10",
+      "year": 2018,
+      "month": 5,
+      "day": 22,
+      "hour": 23,
+      "minute": 57,
+      "second": 10
+    }
+  },
+  {
+    "id": 8,
+    "name": "Zilla Agency",
+    "code": "ZillaAgencyCode",
+    "description": "Nisi do aute ut sint minim.",
+    "additionalIdentifier": "ZillaAgencyCodeAdditional",
+    "entityState": 3,
+    "entityRefId": 17,
+    "stateId": 3,
+    "createDate": {
+      "date": "2018-06-09",
+      "time": "13:04:16",
+      "year": 2018,
+      "month": 6,
+      "day": 9,
+      "hour": 13,
+      "minute": 4,
+      "second": 16
+    },
+    "legalName": "",
+    "vatNumber": "5b6855ca40cc8877fa6ec5ae",
+    "companyRegistrationNumber": 21625722,
+    "companyTypeId": "",
+    "website": "lumbrex.com",
+    "email": "info@applideck.co.uk",
+    "phone": "+44 (860) 434-31-25",
+    "fax": "(908) 519-36-26",
+    "countryCode": "NE",
+    "cityCode": "CON",
+    "address": "Utting, Ruby Street 571",
+    "postcode": 46025,
+    "currencyCode": "EUR",
+    "logo": "http://placehold.it/32x32",
+    "specialities": [
+      {
+        "agencyId": 9,
+        "specialityId": 5,
+        "specialityName": "esse"
+      },
+      {
+        "agencyId": 9,
+        "specialityId": 8,
+        "specialityName": "minim"
+      },
+      {
+        "agencyId": 10,
+        "specialityId": 3,
+        "specialityName": "in"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 10,
+        "specialityName": "ad"
+      },
+      {
+        "agencyId": 5,
+        "specialityId": 10,
+        "specialityName": "laboris"
+      }
+    ],
+    "updateDate": {
+      "date": "2018-01-06",
+      "time": "09:37:30",
+      "year": 2018,
+      "month": 1,
+      "day": 6,
+      "hour": 9,
+      "minute": 37,
+      "second": 30
+    }
+  }
+]

@@ -19,9 +19,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {H21ProfileUserCardComponent} from './components/profile/h21-profile-user-card/h21-profile-user-card.component';
 import {ProfileUserCardDemoComponent} from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
 import { DemoComponent } from './components/demo/demo/demo.component';
+import { UserProfileComponent } from './components/profile/userProfile/user-profile/user-profile.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
+	{path: 'userProfile/:id', component: UserProfileComponent},
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
 	{path: '**', redirectTo: '/'},
@@ -32,7 +34,8 @@ const routes: Routes = [
 			AppComponent,
 			H21ProfileUserCardComponent,
 			ProfileUserCardDemoComponent,
-			DemoComponent
+			DemoComponent,
+			UserProfileComponent
 		],
 		imports: [
 			BrowserModule,
