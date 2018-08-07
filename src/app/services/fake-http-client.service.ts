@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {IUserProfileDto} from "../dto/profile/i-user-profile-dto";
 import {IUserProfileListDto} from "../dto/profile/i-user-profile-list-dto";
 import {Observable} from "rxjs/internal/Observable";
-import { of as observableOf } from 'rxjs';
+import {of as observableOf} from 'rxjs';
 import {IAgentProfileDto} from "../dto/profile/i-agent-profile-dto";
 import {IAgentProfileListDto} from "../dto/profile/i-agent-profile-list-dto";
 import {IAgencyProfileDto} from "../dto/profile/i-agency-profile-dto";
@@ -14,6 +14,7 @@ import {IHistory} from "../dto/i-history";
 import {IFolder} from "../dto/i-folder";
 import {IClaim} from "../dto/i-claim";
 import {IUserLink} from "../dto/i-user-link";
+
 declare var require: any;
 
 @Injectable({
@@ -46,14 +47,14 @@ export class FakeHttpClientService {
 		return observableOf(this.userProfileList);
 	}
 
-	getUserFolder(): IFolder[]{
+	getUserFolder(): IFolder[] {
 		return [
 			{id: 1, name: "Docs", permission: "Contributor"},
 			{id: 2, name: "Users", permission: "Reader"}
 		];
 	}
 
-	getUserClaim(): IClaim[]{
+	getUserClaim(): IClaim[] {
 		return [
 			{id: 1, name: "Email", value: "name@mysite.com"},
 			{id: 2, name: "Gender", value: "Male"},
@@ -67,7 +68,7 @@ export class FakeHttpClientService {
 		];
 	}
 
-	getUserLink(): IUserLink[]{
+	getUserLink(): IUserLink[] {
 		return [
 			{id: 1, agency: "VCK travel", branch: "VCK Travel (H)", role: "Agent, Traveler"},
 			{id: 2, agency: "VCK travel", branch: "VCK Travel (H)", role: "Agent, Traveler"},
@@ -100,7 +101,7 @@ export class FakeHttpClientService {
 		return observableOf(this.horseCompanyList);
 	}
 
-	getHistory() : IHistory[]{
+	getHistory(): IHistory[] {
 		return [
 			{
 				id: 1, date: new Date(2018, 8, 1), action: "Edit", user: "Sergey Strovatikov", expandData: [
@@ -128,5 +129,23 @@ export class FakeHttpClientService {
 				]
 			},
 		];
+	}
+
+	setUpdateDate(arr: any[]): void {
+		arr.forEach(x => {
+			var date = new Date();
+			date.setDate(new Date(x.createDate.date).getDate() + 1);
+			x.updateDate = {
+				date: date.toDateString(),
+				time: '',
+				day: 0,
+				hour: 0,
+				minute: 0,
+				month: 0,
+				second: 0,
+				year: 0
+			};
+			x.createDate.date = new Date(x.createDate.date).toDateString();
+		});
 	}
 }
