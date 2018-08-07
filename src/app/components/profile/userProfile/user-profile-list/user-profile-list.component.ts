@@ -6,7 +6,7 @@ import {ProfileVocabularyService} from "../../../../services/profile-vocabulary.
 @Component({
 	selector: 'user-profile-list',
 	templateUrl: './user-profile-list.component.html',
-	styleUrls: ['./user-profile-list.component.css']
+	styleUrls: ['./user-profile-list.component.scss']
 })
 export class UserProfileListComponent implements OnInit {
 
