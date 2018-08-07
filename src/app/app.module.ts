@@ -26,12 +26,15 @@ import {DemoComponent} from './components/demo/demo/demo.component';
 import {DashboardComponent} from './components/demo/dashboard/dashboard.component';
 import {ChartsModule} from 'ng2-charts';
 import {UserProfileComponent} from "./components/profile/userProfile/user-profile/user-profile.component";
+import {UserProfileListComponent} from './components/profile/userProfile/user-profile-list/user-profile-list.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
 	{path: 'dashboard', component: DashboardComponent},
+	{path: 'userProfile/:id', component: UserProfileComponent},
+	{path: 'users', component: UserProfileListComponent},
 	{path: '**', redirectTo: 'dashboard'}
 ];
 
@@ -42,7 +45,8 @@ const routes: Routes = [
 			ProfileUserCardDemoComponent,
 			DemoComponent,
 			UserProfileComponent,
-			DashboardComponent
+			DashboardComponent,
+			UserProfileListComponent
 		],
 		imports: [
 			BrowserModule,
