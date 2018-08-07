@@ -77,14 +77,6 @@ export class UserProfileComponent implements AfterContentChecked, OnInit {
 		);
 
 		this.validator.register(
-			'entity.email',
-			() => {
-				return !!this.entity && !!this.entity.email && this.entity.email.length > 10;
-			},
-			'Email is incorrect'
-		);
-
-		this.validator.register(
 			'entity.firstName',
 			() => {
 				return !!this.entity && !!this.entity.firstName
@@ -114,16 +106,6 @@ export class UserProfileComponent implements AfterContentChecked, OnInit {
 		this.vocabulary.getLanguages().subscribe(e => {
 			this.languages = e;
 		});
-	}
-
-	/**
-	 * Returns a description of the generated FormControl validation error
-	 * @param FormControl element
-	 * @returns {string} Error message text
-	 */
-	getErrorMessage(control: any): string {
-		return control.hasError('required') ? 'You must enter a value' :
-			control.hasError('email') ? 'Not a valid email' : '';
 	}
 
 	cancel() {

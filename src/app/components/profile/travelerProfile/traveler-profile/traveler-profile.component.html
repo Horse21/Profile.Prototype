@@ -1,3 +1,229 @@
-<p>
-  traveler-profile works!
-</p>
+<mat-card class="c-h21-profile-user-card">
+
+	<div class="c-h21-profile-user-card_header">
+		<mat-card-title class="c-h21-profile-user-card_title">{{entity.firstName}} {{entity.lastName}}</mat-card-title>
+		<mat-card-header>
+			<div mat-card-avatar>
+				<button *ngIf="editable" class="c-h21-profile-user-card_upload-avatar-button" (click)="fileInput.click()">
+					<span>Add photo</span>
+				</button>
+			</div>
+			<input #fileInput type="file" style="display:none;" />
+
+			<input id="fileToUpload" type="file" style="display:none;">
+			<!--<img mat-card-avatar src="" alt=""/>-->
+			<div class="c-h21-profile-user-card_meta-data-box">
+				<div class="row">
+					<div class="col-12 col-xl-6">
+						<div class="row no-gutters c-h21-profile-user-card_meta-data-item">
+							<div class="col-6">Date of registration</div>
+							<div class="col-6"><b>{{entity.createDate?.date}} {{entity.createDate?.time}}</b></div>
+						</div>
+					</div>
+					<div class="col-12 col-xl-6">
+						<div class="row no-gutters c-h21-profile-user-card_meta-data-item">
+							<div class="col-6 col-xl-4">Identity user ID:</div>
+							<div class="col-6 col-xl-8"><b>{{entity.identityUserId}}</b></div>
+						</div>
+					</div>
+					<div class="col-12 col-xl-6">
+						<div class="row no-gutters c-h21-profile-user-card_meta-data-item">
+							<div class="col-6">Date of update</div>
+							<div class="col-6"><b>15:03:2018 15:58:19</b></div>
+						</div>
+					</div>
+					<div class="col-12 col-xl-6">
+						<div class="row no-gutters c-h21-profile-user-card_meta-data-item">
+							<div class="col-6 col-xl-4">Status</div>
+							<div class="col-6 col-xl-8"><b>{{vocabulary.nameById(vocabulary.state, entity.stateId)}}</b></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</mat-card-header>
+	</div>
+
+	<mat-card-content>
+		<mat-tab-group>
+
+			<!-- General info tab -->
+			<mat-tab label="General Info" >
+				<h4 class="c-h21-profile-user-card_title">General info</h4>
+				<div class="row">
+					<div class="col-6">
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Name" [readonly]="!editable" [(ngModel)]="entity.name" required>
+							<span matSuffix class="c-h21-profile-user-card_required" *ngIf="!validator.invalid('entity.name')">*</span>
+							<mat-icon matSuffix *ngIf="validator.invalid('entity.name')" color="warn">error</mat-icon>
+							<mat-error *ngIf="validator.invalid('entity.name')">{{validator.invalid('entity.name')}}</mat-error>
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Code" [readonly]="!editable" [(ngModel)]="entity.code" required>
+							<span matSuffix class="c-h21-profile-user-card_required" *ngIf="!validator.invalid('entity.code')">*</span>
+							<mat-icon matSuffix *ngIf="validator.invalid('entity.code')" color="warn">error</mat-icon>
+							<mat-error *ngIf="validator.invalid('entity.code')">{{validator.invalid('entity.code')}}</mat-error>
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Title" [readonly]="!editable" [(ngModel)]="entity.title" required>
+							<span matSuffix class="c-h21-profile-user-card_required" *ngIf="!validator.invalid('entity.title')">*</span>
+							<mat-icon matSuffix *ngIf="validator.invalid('entity.title')" color="warn">error</mat-icon>
+							<mat-error *ngIf="validator.invalid('entity.title')">{{validator.invalid('entity.title')}}</mat-error>
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Phone" [readonly]="!editable" [(ngModel)]="entity.phone">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<mat-select placeholder="Status" [disabled]="!editable" [(value)]="entity.state">
+								<mat-option value="a">Active</mat-option>
+								<mat-option value="b">Blocked</mat-option>
+							</mat-select>
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Suffix" [readonly]="!editable" [(ngModel)]="entity.suffix">
+						</mat-form-field>
+					</div>
+
+					<div class="col-6">
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Nicname" [readonly]="!editable" [(ngModel)]="entity.nickname">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Occupational Title" [readonly]="!editable" [(ngModel)]="entity.occupationalTitle">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Given Name" [readonly]="!editable" [(ngModel)]="entity.givenName">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Other Name" [readonly]="!editable" [(ngModel)]="entity.otherName">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Description" [readonly]="!editable" [(ngModel)]="entity.description">
+						</mat-form-field>
+					</div>
+				</div>
+
+				<div *ngIf="editable" class="c-h21-profile-user-card_action-buttons">
+					<button mat-stroked-button color="primary">Cancel</button>
+					<button mat-raised-button color="primary">Save</button>
+				</div>
+			</mat-tab>
+
+			<!-- Links tab -->
+			<mat-tab label="Links">
+				<div class="row no-gutters">
+					<div class="col-6">
+						<h4 class="c-h21-profile-user-card_title mb-0">Links</h4>
+					</div>
+					<div class="col-6 __text-right">
+						<button mat-raised-button color="primary" (click)="addLink()" *ngIf="editable">Add link</button>
+					</div>
+				</div>
+				<table mat-table [dataSource]="linksData" class="profile-table">
+					<!-- Agency Column -->
+					<ng-container matColumnDef="agency">
+						<th mat-header-cell *matHeaderCellDef [width]="'35%'">Agency</th>
+						<td mat-cell *matCellDef="let element"> {{element.agency}} </td>
+					</ng-container>
+					<!-- Branch Column -->
+					<ng-container matColumnDef="branch">
+						<th mat-header-cell *matHeaderCellDef [width]="'25%'">Branch</th>
+						<td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+					</ng-container>
+					<!-- Role Column -->
+					<ng-container matColumnDef="role">
+						<th mat-header-cell *matHeaderCellDef [width]="'25%'">Role</th>
+						<td mat-cell *matCellDef="let element"> {{element.role}} </td>
+					</ng-container>
+					<!-- Actions Column -->
+					<ng-container matColumnDef="actions">
+						<th mat-header-cell *matHeaderCellDef [width]="'15%'">&nbsp;</th>
+						<td mat-cell *matCellDef="let element">
+							<button mat-icon-button (click)="viewLink(element.id);" matTooltip="View">
+								<mat-icon>visibility</mat-icon>
+							</button>
+							<button mat-icon-button (click)="editLink(element.id);" [disabled]="!editable" matTooltip="Edit">
+								<mat-icon>edit</mat-icon>
+							</button>
+							<button mat-icon-button class="profile-table_removed-row-button" (click)="removeFolderRow(element.id);" [disabled]="!editable" matTooltip="Remove">
+								<mat-icon>delete</mat-icon>
+							</button>
+						</td>
+					</ng-container>
+					<tr mat-header-row *matHeaderRowDef="linksDisplayedColumns"></tr>
+					<tr mat-row *matRowDef="let row; columns: linksDisplayedColumns;" class="profile-table_removed-row"></tr>
+				</table>
+			</mat-tab>
+
+			<!-- History tab -->
+			<mat-tab label="History" >
+				<h4 class="c-h21-profile-user-card_title">History</h4>
+				<table mat-table [dataSource]="historyData" class="profile-table" multiTemplateDataRows>
+					<!-- Expand button Column -->
+					<ng-container matColumnDef="expand">
+						<th mat-header-cell *matHeaderCellDef [width]="'4%'">&nbsp;</th>
+						<td mat-cell *matCellDef="let element" class="profile-table_no-padding">
+							<button class="profile-table_expand-button" mat-icon-button (click)="historyExpandedElement = element" *ngIf="historyExpandedElement != element" matTooltip="Show detail">
+								<mat-icon>chevron_right</mat-icon>
+							</button>
+							<button class="profile-table_expand-button" mat-icon-button (click)="historyExpandedElement = null" *ngIf="historyExpandedElement == element" matTooltip="Hide detail">
+								<mat-icon>expand_more</mat-icon>
+							</button>
+						</td>
+					</ng-container>
+					<!-- Date Column -->
+					<ng-container matColumnDef="date">
+						<th mat-header-cell *matHeaderCellDef [width]="'32%'">Date</th>
+						<td mat-cell *matCellDef="let element"> {{element.date | date: 'MM.dd.yyyy HH:mm'}} </td>
+					</ng-container>
+					<!-- Action Column -->
+					<ng-container matColumnDef="action">
+						<th mat-header-cell *matHeaderCellDef [width]="'32%'">Action</th>
+						<td mat-cell *matCellDef="let element"> {{element.action}} </td>
+					</ng-container>
+					<!-- User Column -->
+					<ng-container matColumnDef="user">
+						<th mat-header-cell *matHeaderCellDef [width]="'32%'">User</th>
+						<td mat-cell *matCellDef="let element"> {{element.user}} </td>
+					</ng-container>
+					<!-- Expanded Content-->
+					<ng-container matColumnDef="expandedDetail">
+						<td mat-cell *matCellDef="let element" [attr.colspan]="historyDisplayedColumns.length" class="profile-table_no-padding">
+							<div class="expanded-detail" [class.expanded-detail__active]="historyExpandedElement === element">
+								<table mat-table [dataSource]="element.expandData" class="profile-table profile-table__expanded-table">
+									<ng-container matColumnDef="blank">
+										<th mat-header-cell *matHeaderCellDef [width]="'4%'">&nbsp;</th>
+										<td mat-cell *matCellDef>&nbsp;</td>
+									</ng-container>
+									<ng-container matColumnDef="field">
+										<th mat-header-cell *matHeaderCellDef [width]="'32%'">Field</th>
+										<td mat-cell *matCellDef="let expElement"> {{expElement.field}} </td>
+									</ng-container>
+									<ng-container matColumnDef="oldValue">
+										<th mat-header-cell *matHeaderCellDef [width]="'32%'">oldValue</th>
+										<td mat-cell *matCellDef="let expElement" class="__text-strike"> {{expElement.oldValue}} </td>
+									</ng-container>
+									<ng-container matColumnDef="newValue">
+										<th mat-header-cell *matHeaderCellDef [width]="'32%'">newValue</th>
+										<td mat-cell *matCellDef="let expElement"> {{expElement.newValue}} </td>
+									</ng-container>
+
+									<tr mat-header-row *matHeaderRowDef="historyExpandDisplayedColumns"></tr>
+									<tr mat-row *matRowDef="let expElement; columns: historyExpandDisplayedColumns;"></tr>
+								</table>
+							</div>
+						</td>
+					</ng-container>
+					<tr mat-header-row *matHeaderRowDef="historyDisplayedColumns"></tr>
+					<tr mat-row *matRowDef="let element; columns: historyDisplayedColumns;" [class.profile-table_expanded-row]="historyExpandedElement === element"></tr>
+					<tr mat-row *matRowDef="let element; columns: ['expandedDetail']" class="profile-table_expanded-row-detail"></tr>
+				</table>
+			</mat-tab>
+
+			<!-- Stat tab -->
+			<mat-tab label="Stat">
+				<h4 class="c-h21-profile-user-card_title">Stat</h4>
+			</mat-tab>
+
+		</mat-tab-group>
+	</mat-card-content>
+</mat-card>

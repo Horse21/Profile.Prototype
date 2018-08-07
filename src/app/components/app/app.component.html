@@ -21,17 +21,29 @@
 					<mat-icon>apps</mat-icon>
 					<span>Board</span>
 				</a>
-				<a mat-button href="/tmc">
+				<a mat-button href="/tmc" [class.is-active]="isTmc()">
 					<mat-icon>domain</mat-icon>
 					<span>TMC</span>
 				</a>
-				<a mat-button [routerLink]="['/users']" [class.is-active]="isRoute('users')">
+				<a mat-button [routerLink]="['/users']" [class.is-active]="isRoutes(['users', 'userProfile'])">
 					<mat-icon>person</mat-icon>
 					<span>Users</span>
 				</a>
 				<a mat-button [routerLink]="['/agencies']">
 					<mat-icon>work</mat-icon>
 					<span>Agencies</span>
+				</a>
+				<a mat-button [routerLink]="['/travelers']">
+					<mat-icon>work</mat-icon>
+					<span>Travelers</span>
+				</a>
+				<a mat-button [routerLink]="['/agents']">
+					<mat-icon>work</mat-icon>
+					<span>Agents</span>
+				</a>
+				<a mat-button [routerLink]="['/providers']">
+					<mat-icon>work</mat-icon>
+					<span>Providers</span>
 				</a>
 			</nav>
 			<nav class="sidebar_expand_nav">

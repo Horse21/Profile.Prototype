@@ -16,7 +16,7 @@ export interface IAgencyProfileDto extends IBaseProfileDto{
 	address? : string;
 	postcode? : string;
 	currencyCode? : string;
-	logo : IFileInfo;
+	logo? : IFileInfo;
 	specialties? : IAgencySpecialtyDto[];
 	updateDate? : IH21DateTime;
 }

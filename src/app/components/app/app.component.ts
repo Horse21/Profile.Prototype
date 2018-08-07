@@ -82,4 +82,20 @@ export class AppComponent {
 	isRoute(route: string){
 		return this.router.url.indexOf(route) >= 0;
 	}
+
+	isRoutes(routes: string[]){
+		return routes.some(e => this.router.url.indexOf(e) >= 0);
+	}
+
+	isTmc():boolean{
+		return this.isRoutes([
+			'agencies',
+			'travelers',
+			'agents',
+			'providers',
+			'agentProfile',
+			'travelerProfile',
+			'agencyProfile',
+			'providerProfile']);
+	}
 }
