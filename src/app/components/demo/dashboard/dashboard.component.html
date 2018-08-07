@@ -89,5 +89,17 @@
 					(chartClick)="chartClicked($event)"></canvas>
 		</div>
 	</div>
-
+	<div class="c-h21-dashboard-widget __large">
+		<div class="c-h21-dashboard-widget-title">
+			Statistic
+		</div>
+		<div class="c-h21-dashboard-widget-content">
+			<canvas baseChart
+					[data]="pieChartData"
+					[labels]="pieChartLabels"
+					[chartType]="pieChartType"
+					(chartHover)="chartHovered($event)"
+					(chartClick)="chartClicked($event)"></canvas>
+		</div>
+	</div>
 </div>
