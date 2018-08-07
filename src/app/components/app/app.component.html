@@ -14,9 +14,9 @@
 		</div>
 	</div>
 	<div class="row no-gutters page_content-box">
-		<div class="col-12 no-gutters __has-sidebar __has-expanded-sidebar">
+		<div class="col-12 no-gutters __has-sidebar">
 			<nav class="sidebar_nav">
-				<a mat-button href="/board">
+				<a mat-button href="/dashboard" class="is-active">
 					<mat-icon>apps</mat-icon>
 					<span>Board</span>
 				</a>
@@ -38,7 +38,6 @@
 			</nav>
 			<div class="page_content">
 				<router-outlet></router-outlet>
-				<button mat-raised-button color="primary" (click)="testLinks()">Test links</button>
 			</div>
 		</div>
 	</div>

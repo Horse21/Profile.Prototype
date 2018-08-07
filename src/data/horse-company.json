@@ -1,0 +1,992 @@
+[
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Geekol",
+    "legalName": "Exoblue",
+    "vatNumber": "Zinca",
+    "companyRegistrationNumber": 0,
+    "companyTypeId": "5b686f023a16fd8c373b10a7",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Culpa tempor aliquip pariatur laboris veniam minim dolor consectetur aliquip nostrud sint.",
+    "webSite": "canopoly.com",
+    "generalEmail": 0,
+    "countryCode": "ES",
+    "cityCode": "VIE",
+    "address": "583 Broadway , Bodega, Northern Mariana Islands, 506",
+    "postcode": 16692,
+    "phone": "+1 (849) 461-2168",
+    "fax": "+1 (889) 583-2408",
+    "currencyCode": "CAN",
+    "updateDate": {
+      "date": "2015-05-02",
+      "time": "06:52:35",
+      "year": 2017,
+      "month": 1,
+      "day": 22,
+      "hour": 10,
+      "minute": 14
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Velity",
+    "legalName": "Malathion",
+    "vatNumber": "Slumberia",
+    "companyRegistrationNumber": 1,
+    "companyTypeId": "5b686f02f343cedb65c19694",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Cillum proident consequat incididunt deserunt aute tempor esse labore officia eu occaecat sit consequat.",
+    "webSite": "orbixtar.com",
+    "generalEmail": 1,
+    "countryCode": "PA",
+    "cityCode": "CAD",
+    "address": "676 Baycliff Terrace, Caroleen, Pennsylvania, 3825",
+    "postcode": 85131,
+    "phone": "+1 (898) 530-2617",
+    "fax": "+1 (877) 507-2238",
+    "currencyCode": "EUR",
+    "updateDate": {
+      "date": "2015-03-30",
+      "time": "10:37:09",
+      "year": 2016,
+      "month": 7,
+      "day": 4,
+      "hour": 12,
+      "minute": 51
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Aquasseur",
+    "legalName": "Medicroix",
+    "vatNumber": "Omatom",
+    "companyRegistrationNumber": 2,
+    "companyTypeId": "5b686f02b621c1dd2409d60b",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Tempor nulla excepteur esse magna aute irure minim eiusmod ad commodo consectetur incididunt culpa.",
+    "webSite": "enthaze.com",
+    "generalEmail": 2,
+    "countryCode": "UZ",
+    "cityCode": "BLE",
+    "address": "612 Dover Street, Bangor, Federated States Of Micronesia, 7281",
+    "postcode": 13707,
+    "phone": "+1 (870) 471-2022",
+    "fax": "+1 (845) 423-3000",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2016-05-16",
+      "time": "12:30:21",
+      "year": 2014,
+      "month": 10,
+      "day": 25,
+      "hour": 6,
+      "minute": 6
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Zoid",
+    "legalName": "Visualix",
+    "vatNumber": "Ontagene",
+    "companyRegistrationNumber": 3,
+    "companyTypeId": "5b686f023d3f0947b18573ea",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Nostrud elit aliquip magna aute sint consectetur.",
+    "webSite": "ecrater.com",
+    "generalEmail": 3,
+    "countryCode": "AI",
+    "cityCode": "NAD",
+    "address": "144 Kingsway Place, Knowlton, Kansas, 8747",
+    "postcode": 48168,
+    "phone": "+1 (858) 561-3822",
+    "fax": "+1 (954) 496-3084",
+    "currencyCode": "EUR",
+    "updateDate": {
+      "date": "2017-09-29",
+      "time": "10:22:10",
+      "year": 2018,
+      "month": 3,
+      "day": 22,
+      "hour": 4,
+      "minute": 52
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Orbaxter",
+    "legalName": "Anivet",
+    "vatNumber": "Vinch",
+    "companyRegistrationNumber": 4,
+    "companyTypeId": "5b686f02a3952c9286a16ee8",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Deserunt magna sint nulla esse anim irure duis dolor magna tempor mollit.",
+    "webSite": "portalis.com",
+    "generalEmail": 4,
+    "countryCode": "MV",
+    "cityCode": "LUN",
+    "address": "909 Howard Avenue, Floriston, Missouri, 8285",
+    "postcode": 92116,
+    "phone": "+1 (932) 570-3628",
+    "fax": "+1 (844) 532-3023",
+    "currencyCode": "EUR",
+    "updateDate": {
+      "date": "2014-07-17",
+      "time": "09:36:34",
+      "year": 2014,
+      "month": 12,
+      "day": 2,
+      "hour": 12,
+      "minute": 15
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Geologix",
+    "legalName": "Caxt",
+    "vatNumber": "Tingles",
+    "companyRegistrationNumber": 5,
+    "companyTypeId": "5b686f02d8d064eb54af26eb",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Magna elit exercitation veniam minim enim ex.",
+    "webSite": "kinetica.com",
+    "generalEmail": 5,
+    "countryCode": "TO",
+    "cityCode": "SHA",
+    "address": "321 Anthony Street, Homeworth, Delaware, 4985",
+    "postcode": 57601,
+    "phone": "+1 (938) 439-3213",
+    "fax": "+1 (823) 422-3343",
+    "currencyCode": "RUB",
+    "updateDate": {
+      "date": "2016-02-15",
+      "time": "08:29:15",
+      "year": 2018,
+      "month": 4,
+      "day": 23,
+      "hour": 3,
+      "minute": 20
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Phormula",
+    "legalName": "Xth",
+    "vatNumber": "Netility",
+    "companyRegistrationNumber": 6,
+    "companyTypeId": "5b686f02659bf050c5b15137",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Mollit in pariatur duis velit sit sunt laborum laborum veniam aliquip.",
+    "webSite": "lunchpad.com",
+    "generalEmail": 6,
+    "countryCode": "BR",
+    "cityCode": "HAR",
+    "address": "731 Bay Avenue, Whitewater, Massachusetts, 6887",
+    "postcode": 59275,
+    "phone": "+1 (977) 460-2572",
+    "fax": "+1 (842) 462-3785",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2017-12-09",
+      "time": "02:32:06",
+      "year": 2016,
+      "month": 11,
+      "day": 9,
+      "hour": 3,
+      "minute": 57
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Momentia",
+    "legalName": "Kidgrease",
+    "vatNumber": "Goko",
+    "companyRegistrationNumber": 7,
+    "companyTypeId": "5b686f0272a71b273a4a13cd",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Est sit nisi aliquip eiusmod incididunt veniam culpa velit.",
+    "webSite": "katakana.com",
+    "generalEmail": 7,
+    "countryCode": "SM",
+    "cityCode": "RUC",
+    "address": "228 Estate Road, Websterville, Iowa, 3264",
+    "postcode": 27388,
+    "phone": "+1 (832) 533-2265",
+    "fax": "+1 (932) 516-3542",
+    "currencyCode": "EUR",
+    "updateDate": {
+      "date": "2017-01-26",
+      "time": "04:08:51",
+      "year": 2017,
+      "month": 2,
+      "day": 8,
+      "hour": 7,
+      "minute": 36
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Electonic",
+    "legalName": "Extragen",
+    "vatNumber": "Enomen",
+    "companyRegistrationNumber": 8,
+    "companyTypeId": "5b686f02453941d87673a31e",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Voluptate non minim duis do ullamco consequat.",
+    "webSite": "firewax.com",
+    "generalEmail": 8,
+    "countryCode": "LY",
+    "cityCode": "STO",
+    "address": "955 Beverly Road, Fairacres, South Dakota, 592",
+    "postcode": 36088,
+    "phone": "+1 (948) 503-3167",
+    "fax": "+1 (848) 567-2435",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2015-10-12",
+      "time": "01:31:59",
+      "year": 2016,
+      "month": 12,
+      "day": 6,
+      "hour": 12,
+      "minute": 59
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Bluegrain",
+    "legalName": "Accuprint",
+    "vatNumber": "Gazak",
+    "companyRegistrationNumber": 9,
+    "companyTypeId": "5b686f02bcda7b8db042c5fb",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Exercitation anim dolore id commodo nulla esse Lorem.",
+    "webSite": "hatology.com",
+    "generalEmail": 9,
+    "countryCode": "US",
+    "cityCode": "BON",
+    "address": "553 Veronica Place, Elfrida, Puerto Rico, 9740",
+    "postcode": 82022,
+    "phone": "+1 (854) 482-2125",
+    "fax": "+1 (806) 485-2328",
+    "currencyCode": "USD",
+    "updateDate": {
+      "date": "2017-03-14",
+      "time": "12:26:27",
+      "year": 2016,
+      "month": 9,
+      "day": 2,
+      "hour": 12,
+      "minute": 14
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Darwinium",
+    "legalName": "Talae",
+    "vatNumber": "Vendblend",
+    "companyRegistrationNumber": 10,
+    "companyTypeId": "5b686f0261202502951db403",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Irure deserunt Lorem aute velit aliqua fugiat reprehenderit pariatur.",
+    "webSite": "opticom.com",
+    "generalEmail": 10,
+    "countryCode": "NI",
+    "cityCode": "LAU",
+    "address": "411 Sackman Street, Sunbury, Oregon, 5121",
+    "postcode": 80577,
+    "phone": "+1 (998) 424-2727",
+    "fax": "+1 (938) 581-2776",
+    "currencyCode": "EUR",
+    "updateDate": {
+      "date": "2017-06-17",
+      "time": "04:49:33",
+      "year": 2015,
+      "month": 2,
+      "day": 23,
+      "hour": 10,
+      "minute": 36
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Zolarex",
+    "legalName": "Urbanshee",
+    "vatNumber": "Temorak",
+    "companyRegistrationNumber": 11,
+    "companyTypeId": "5b686f02a221be659619c980",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Magna cillum consectetur fugiat duis incididunt sunt occaecat cupidatat tempor qui aliqua labore.",
+    "webSite": "uniworld.com",
+    "generalEmail": 11,
+    "countryCode": "SV",
+    "cityCode": "LOD",
+    "address": "601 Landis Court, Fontanelle, Hawaii, 222",
+    "postcode": 74114,
+    "phone": "+1 (826) 524-3415",
+    "fax": "+1 (819) 550-2514",
+    "currencyCode": "CAN",
+    "updateDate": {
+      "date": "2016-08-09",
+      "time": "01:45:51",
+      "year": 2015,
+      "month": 8,
+      "day": 23,
+      "hour": 5,
+      "minute": 10
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Zensor",
+    "legalName": "Magnemo",
+    "vatNumber": "Gogol",
+    "companyRegistrationNumber": 12,
+    "companyTypeId": "5b686f020acb13dce03285f7",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Irure ea eu labore veniam officia fugiat sint reprehenderit.",
+    "webSite": "noralex.com",
+    "generalEmail": 12,
+    "countryCode": "ST",
+    "cityCode": "HOB",
+    "address": "371 Indiana Place, Sexton, Alabama, 2872",
+    "postcode": 31288,
+    "phone": "+1 (964) 557-2358",
+    "fax": "+1 (949) 520-3222",
+    "currencyCode": "USD",
+    "updateDate": {
+      "date": "2014-12-29",
+      "time": "02:49:16",
+      "year": 2016,
+      "month": 5,
+      "day": 6,
+      "hour": 5,
+      "minute": 13
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Envire",
+    "legalName": "Octocore",
+    "vatNumber": "Mazuda",
+    "companyRegistrationNumber": 13,
+    "companyTypeId": "5b686f02f5b69fc64a74f444",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Excepteur cupidatat ad aliqua aliqua tempor voluptate ea do eiusmod quis laborum non in.",
+    "webSite": "isologix.com",
+    "generalEmail": 13,
+    "countryCode": "SI",
+    "cityCode": "BEY",
+    "address": "761 Whitwell Place, Hollins, Alaska, 636",
+    "postcode": 85096,
+    "phone": "+1 (974) 552-2525",
+    "fax": "+1 (922) 531-2127",
+    "currencyCode": "USD",
+    "updateDate": {
+      "date": "2014-04-16",
+      "time": "11:05:11",
+      "year": 2014,
+      "month": 10,
+      "day": 30,
+      "hour": 2,
+      "minute": 31
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Bedlam",
+    "legalName": "Biotica",
+    "vatNumber": "Mediot",
+    "companyRegistrationNumber": 14,
+    "companyTypeId": "5b686f0281e4371d2c2aa2b4",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Qui ipsum aute aliqua qui.",
+    "webSite": "kyaguru.com",
+    "generalEmail": 14,
+    "countryCode": "SN",
+    "cityCode": "LEE",
+    "address": "963 Polar Street, Skyland, Mississippi, 4345",
+    "postcode": 85847,
+    "phone": "+1 (913) 409-3482",
+    "fax": "+1 (819) 408-3345",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2016-11-18",
+      "time": "09:57:48",
+      "year": 2015,
+      "month": 12,
+      "day": 19,
+      "hour": 4,
+      "minute": 38
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Zytrax",
+    "legalName": "Lexicondo",
+    "vatNumber": "Applidec",
+    "companyRegistrationNumber": 15,
+    "companyTypeId": "5b686f02125d08f3c6eb06ff",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Irure reprehenderit eu non do commodo laboris anim culpa laboris.",
+    "webSite": "zidox.com",
+    "generalEmail": 15,
+    "countryCode": "CK",
+    "cityCode": "GOO",
+    "address": "118 Lloyd Street, Grapeview, California, 9852",
+    "postcode": 85191,
+    "phone": "+1 (897) 554-2643",
+    "fax": "+1 (926) 590-3834",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2015-07-23",
+      "time": "01:55:47",
+      "year": 2014,
+      "month": 6,
+      "day": 12,
+      "hour": 8,
+      "minute": 42
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Digial",
+    "legalName": "Intergeek",
+    "vatNumber": "Viasia",
+    "companyRegistrationNumber": 16,
+    "companyTypeId": "5b686f02f57b13dce05ab4e4",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Incididunt tempor excepteur ut esse aute elit est et Lorem ipsum reprehenderit fugiat tempor.",
+    "webSite": "utara.com",
+    "generalEmail": 16,
+    "countryCode": "EG",
+    "cityCode": "IDA",
+    "address": "525 Juliana Place, Martinez, Montana, 1581",
+    "postcode": 99199,
+    "phone": "+1 (896) 589-2068",
+    "fax": "+1 (832) 563-3376",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2017-07-25",
+      "time": "12:29:42",
+      "year": 2015,
+      "month": 10,
+      "day": 10,
+      "hour": 10,
+      "minute": 33
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Bitrex",
+    "legalName": "Cowtown",
+    "vatNumber": "Martgo",
+    "companyRegistrationNumber": 17,
+    "companyTypeId": "5b686f029e0baa9fbc425d88",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Ullamco irure consectetur laborum aliquip aute ullamco elit magna non qui sint reprehenderit do.",
+    "webSite": "zidant.com",
+    "generalEmail": 17,
+    "countryCode": "CG",
+    "cityCode": "VEN",
+    "address": "904 Taylor Street, Richmond, Virgin Islands, 7804",
+    "postcode": 34938,
+    "phone": "+1 (818) 562-2924",
+    "fax": "+1 (920) 534-3990",
+    "currencyCode": "EUR",
+    "updateDate": {
+      "date": "2016-08-26",
+      "time": "07:53:50",
+      "year": 2016,
+      "month": 4,
+      "day": 3,
+      "hour": 4,
+      "minute": 27
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Eschoir",
+    "legalName": "Gronk",
+    "vatNumber": "Sloganaut",
+    "companyRegistrationNumber": 18,
+    "companyTypeId": "5b686f021f970100cea185b1",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Ipsum eiusmod sint incididunt aliquip ad nisi veniam mollit.",
+    "webSite": "mangelica.com",
+    "generalEmail": 18,
+    "countryCode": "ET",
+    "cityCode": "EBR",
+    "address": "386 Myrtle Avenue, Austinburg, North Carolina, 4318",
+    "postcode": 84328,
+    "phone": "+1 (967) 553-3702",
+    "fax": "+1 (919) 523-2312",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2018-03-11",
+      "time": "03:35:17",
+      "year": 2014,
+      "month": 7,
+      "day": 17,
+      "hour": 4,
+      "minute": 13
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Enersave",
+    "legalName": "Pheast",
+    "vatNumber": "Mobildata",
+    "companyRegistrationNumber": 19,
+    "companyTypeId": "5b686f026f6ed4401a2b730f",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Laboris ex laboris minim proident sint ex do proident ex.",
+    "webSite": "intradisk.com",
+    "generalEmail": 19,
+    "countryCode": "BT",
+    "cityCode": "KAN",
+    "address": "244 Shale Street, Glenshaw, Colorado, 2743",
+    "postcode": 41701,
+    "phone": "+1 (818) 575-2667",
+    "fax": "+1 (977) 496-3811",
+    "currencyCode": "USD",
+    "updateDate": {
+      "date": "2014-04-06",
+      "time": "08:49:01",
+      "year": 2017,
+      "month": 7,
+      "day": 17,
+      "hour": 4,
+      "minute": 6
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Uberlux",
+    "legalName": "Vantage",
+    "vatNumber": "Miraclis",
+    "companyRegistrationNumber": 20,
+    "companyTypeId": "5b686f0252b15c4927709316",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Laborum laborum magna aute sunt velit sunt aliquip veniam ex.",
+    "webSite": "sequitur.com",
+    "generalEmail": 20,
+    "countryCode": "PK",
+    "cityCode": "ORV",
+    "address": "237 Kaufman Place, Nescatunga, Michigan, 2064",
+    "postcode": 22232,
+    "phone": "+1 (861) 483-3778",
+    "fax": "+1 (936) 463-2865",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2015-04-24",
+      "time": "09:44:05",
+      "year": 2018,
+      "month": 8,
+      "day": 21,
+      "hour": 2,
+      "minute": 42
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Keengen",
+    "legalName": "Zenco",
+    "vatNumber": "Greeker",
+    "companyRegistrationNumber": 21,
+    "companyTypeId": "5b686f02b877100cfc43e59a",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Nisi nostrud laborum dolor consectetur nisi ad consectetur.",
+    "webSite": "pharmex.com",
+    "generalEmail": 21,
+    "countryCode": "BN",
+    "cityCode": "RIV",
+    "address": "940 Canda Avenue, Enlow, Illinois, 1713",
+    "postcode": 25948,
+    "phone": "+1 (819) 584-2782",
+    "fax": "+1 (974) 521-2072",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2015-10-12",
+      "time": "01:41:20",
+      "year": 2014,
+      "month": 7,
+      "day": 8,
+      "hour": 7,
+      "minute": 56
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Idealis",
+    "legalName": "Combogene",
+    "vatNumber": "Cedward",
+    "companyRegistrationNumber": 22,
+    "companyTypeId": "5b686f02da3e8c9faa40cea1",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Mollit commodo aute adipisicing proident qui labore et exercitation reprehenderit.",
+    "webSite": "zboo.com",
+    "generalEmail": 22,
+    "countryCode": "AE",
+    "cityCode": "HAR",
+    "address": "843 Coyle Street, Fairview, Wyoming, 4752",
+    "postcode": 66639,
+    "phone": "+1 (897) 438-2854",
+    "fax": "+1 (833) 475-2401",
+    "currencyCode": "THB",
+    "updateDate": {
+      "date": "2015-06-01",
+      "time": "02:06:55",
+      "year": 2016,
+      "month": 11,
+      "day": 14,
+      "hour": 7,
+      "minute": 51
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Enervate",
+    "legalName": "Kage",
+    "vatNumber": "Obliq",
+    "companyRegistrationNumber": 23,
+    "companyTypeId": "5b686f0202bee6e54d7b8f4d",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Ullamco cupidatat aute ex et aliqua.",
+    "webSite": "quonata.com",
+    "generalEmail": 23,
+    "countryCode": "KM",
+    "cityCode": "SPE",
+    "address": "994 Joval Court, Catherine, Ohio, 9454",
+    "postcode": 41517,
+    "phone": "+1 (990) 590-3472",
+    "fax": "+1 (927) 484-3893",
+    "currencyCode": "RUB",
+    "updateDate": {
+      "date": "2016-01-24",
+      "time": "01:29:21",
+      "year": 2015,
+      "month": 4,
+      "day": 26,
+      "hour": 5,
+      "minute": 7
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Eargo",
+    "legalName": "Ceprene",
+    "vatNumber": "Gadtron",
+    "companyRegistrationNumber": 24,
+    "companyTypeId": "5b686f028c20b459023d19b1",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Fugiat nulla ipsum minim ea.",
+    "webSite": "globoil.com",
+    "generalEmail": 24,
+    "countryCode": "AZ",
+    "cityCode": "MAX",
+    "address": "593 Olive Street, Trinway, New Mexico, 6622",
+    "postcode": 47515,
+    "phone": "+1 (809) 586-3059",
+    "fax": "+1 (822) 422-3409",
+    "currencyCode": "USD",
+    "updateDate": {
+      "date": "2015-08-08",
+      "time": "12:09:18",
+      "year": 2016,
+      "month": 8,
+      "day": 26,
+      "hour": 9,
+      "minute": 33
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Cuizine",
+    "legalName": "Joviold",
+    "vatNumber": "Cablam",
+    "companyRegistrationNumber": 25,
+    "companyTypeId": "5b686f028f27bd10b763accd",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Reprehenderit nostrud do anim occaecat irure magna duis proident deserunt ex voluptate nostrud voluptate.",
+    "webSite": "maroptic.com",
+    "generalEmail": 25,
+    "countryCode": "JO",
+    "cityCode": "CHA",
+    "address": "235 Huron Street, Wanship, Nebraska, 2431",
+    "postcode": 46452,
+    "phone": "+1 (806) 450-2084",
+    "fax": "+1 (846) 523-3188",
+    "currencyCode": "JPY",
+    "updateDate": {
+      "date": "2016-03-26",
+      "time": "05:02:25",
+      "year": 2014,
+      "month": 8,
+      "day": 16,
+      "hour": 6,
+      "minute": 42
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Luxuria",
+    "legalName": "Sybixtex",
+    "vatNumber": "Atgen",
+    "companyRegistrationNumber": 26,
+    "companyTypeId": "5b686f020e96ef4bade8fd62",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Esse nostrud proident amet nostrud nulla culpa culpa veniam irure duis nostrud.",
+    "webSite": "codax.com",
+    "generalEmail": 26,
+    "countryCode": "NZ",
+    "cityCode": "REH",
+    "address": "676 Ditmars Street, Ticonderoga, Wisconsin, 2131",
+    "postcode": 52626,
+    "phone": "+1 (991) 581-2111",
+    "fax": "+1 (884) 600-3710",
+    "currencyCode": "JPY",
+    "updateDate": {
+      "date": "2015-09-22",
+      "time": "12:40:28",
+      "year": 2016,
+      "month": 5,
+      "day": 23,
+      "hour": 11,
+      "minute": 42
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Buzzmaker",
+    "legalName": "Xixan",
+    "vatNumber": "Combogen",
+    "companyRegistrationNumber": 27,
+    "companyTypeId": "5b686f022e72754592a519f0",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Dolore nostrud Lorem adipisicing proident.",
+    "webSite": "avit.com",
+    "generalEmail": 27,
+    "countryCode": "CC",
+    "cityCode": "DRU",
+    "address": "848 Seton Place, Elbert, Washington, 6136",
+    "postcode": 22388,
+    "phone": "+1 (843) 429-2062",
+    "fax": "+1 (993) 528-2081",
+    "currencyCode": "CAN",
+    "updateDate": {
+      "date": "2014-09-02",
+      "time": "05:56:02",
+      "year": 2018,
+      "month": 10,
+      "day": 15,
+      "hour": 10,
+      "minute": 8
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Ziore",
+    "legalName": "Zerology",
+    "vatNumber": "Supremia",
+    "companyRegistrationNumber": 28,
+    "companyTypeId": "5b686f02665d22a1504b3966",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Cillum quis ex non reprehenderit elit et officia laborum.",
+    "webSite": "trasola.com",
+    "generalEmail": 28,
+    "countryCode": "KH",
+    "cityCode": "GER",
+    "address": "214 Vermont Street, Vowinckel, Guam, 3434",
+    "postcode": 55337,
+    "phone": "+1 (861) 513-3691",
+    "fax": "+1 (852) 582-2916",
+    "currencyCode": "USD",
+    "updateDate": {
+      "date": "2016-03-10",
+      "time": "03:27:29",
+      "year": 2016,
+      "month": 8,
+      "day": 3,
+      "hour": 11,
+      "minute": 14
+    }
+  },
+  {
+    "logo": "http://placehold.it/32x32",
+    "logoData": {
+      "any": []
+    },
+    "brandingName": "Zenthall",
+    "legalName": "Brainquil",
+    "vatNumber": "Vurbo",
+    "companyRegistrationNumber": 29,
+    "companyTypeId": "5b686f02074863ca7c28fd0e",
+    "specialties": {
+      "IAgencySpecialtyDto": []
+    },
+    "about": "Exercitation duis ut culpa duis laboris eiusmod ea proident nulla ad et deserunt est.",
+    "webSite": "asimiline.com",
+    "generalEmail": 29,
+    "countryCode": "GT",
+    "cityCode": "JAM",
+    "address": "947 Guider Avenue, Cumberland, Rhode Island, 5083",
+    "postcode": 40953,
+    "phone": "+1 (803) 588-3547",
+    "fax": "+1 (887) 418-3845",
+    "currencyCode": "CAN",
+    "updateDate": {
+      "date": "2014-07-12",
+      "time": "11:58:57",
+      "year": 2018,
+      "month": 2,
+      "day": 25,
+      "hour": 10,
+      "minute": 10
+    }
+  }
+]

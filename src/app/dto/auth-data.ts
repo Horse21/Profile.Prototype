@@ -1,7 +1,7 @@
-import { Claim } from '../dto/claim';
+import { IClaim } from './i-claim';
 
 export class AuthData {
   name: string;
   roles: string[];
-  claims: Claim[];
+  claims: IClaim[];
 }
