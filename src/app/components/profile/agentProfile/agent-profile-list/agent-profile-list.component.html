@@ -24,6 +24,7 @@
 		<th mat-header-cell *matHeaderCellDef> Status </th>
 		<td mat-cell *matCellDef="let element"> {{vocabulary.nameById(vocabulary.state, element.stateId)}} </td>
 	</ng-container>
+
 	<ng-container matColumnDef="action">
 		<th mat-header-cell *matHeaderCellDef></th>
 		<td mat-cell *matCellDef="let element" class="action-cell">
