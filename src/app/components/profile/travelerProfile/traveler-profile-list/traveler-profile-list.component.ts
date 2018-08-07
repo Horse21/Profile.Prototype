@@ -7,7 +7,7 @@ import {ITravelerProfileListDto} from "../../../../dto/profile/i-traveler-profil
 @Component({
   selector: 'app-traveler-profile-list',
   templateUrl: './traveler-profile-list.component.html',
-  styleUrls: ['./traveler-profile-list.component.css']
+  styleUrls: ['./traveler-profile-list.component.scss']
 })
 export class TravelerProfileListComponent implements OnInit {
 

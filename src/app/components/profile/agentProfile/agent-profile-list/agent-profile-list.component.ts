@@ -6,7 +6,7 @@ import {IAgentProfileListDto} from "../../../../dto/profile/i-agent-profile-list
 @Component({
   selector: 'app-agent-profile-list',
   templateUrl: './agent-profile-list.component.html',
-  styleUrls: ['./agent-profile-list.component.css']
+  styleUrls: ['./agent-profile-list.component.scss']
 })
 export class AgentProfileListComponent implements OnInit {
 

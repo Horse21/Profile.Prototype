@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
 	selector: 'app-provider-profile-list',
 	templateUrl: './provider-profile-list.component.html',
-	styleUrls: ['./provider-profile-list.component.css']
+	styleUrls: ['./provider-profile-list.component.scss']
 })
 export class ProviderProfileListComponent implements OnInit {
 
