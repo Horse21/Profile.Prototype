@@ -14,6 +14,8 @@ import {IHistory} from "../dto/i-history";
 import {IFolder} from "../dto/i-folder";
 import {IClaim} from "../dto/i-claim";
 import {IUserLink} from "../dto/i-user-link";
+import {ITravelerProfileDto} from "../dto/profile/i-traveler-profile-dto";
+import {ITravelerProfileListDto} from "../dto/profile/i-traveler-profile-list-dto";
 
 declare var require: any;
 
@@ -27,6 +29,9 @@ export class FakeHttpClientService {
 
 	agentProfile: IAgentProfileDto[] = require('../../data/agent-profile.json');
 	agentProfileList: IAgentProfileListDto[] = require('../../data/agent-profile-list.json');
+
+	travelerProfile: ITravelerProfileDto[] = require('../../data/traveler-profile.json');
+	travelerProfileList: ITravelerProfileListDto[] = require('../../data/traveler-profile-list.json');
 
 	agencyProfile: IAgencyProfileDto[] = require('../../data/agency-profile.json');
 	agencyProfileList: IAgencyProfileListDto[] = require('../../data/agency-profile-list.json');
@@ -83,6 +88,14 @@ export class FakeHttpClientService {
 
 	postQueryAgentProfile(): Observable<IAgentProfileListDto[]> {
 		return observableOf(this.agentProfileList);
+	}
+
+	getTravelerProfile(id: number): Observable<ITravelerProfileDto> {
+		return observableOf(this.travelerProfile.find(e => e.id == id));
+	}
+
+	postQueryTravelerProfile(): Observable<ITravelerProfileListDto[]> {
+		return observableOf(this.travelerProfileList);
 	}
 
 	getAgencyProfile(id: number): Observable<IAgencyProfileDto> {

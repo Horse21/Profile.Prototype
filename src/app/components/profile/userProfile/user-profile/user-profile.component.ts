@@ -9,6 +9,7 @@ import {IHistory} from "../../../../dto/i-history";
 import {IFolder} from "../../../../dto/i-folder";
 import {IClaim} from "../../../../dto/i-claim";
 import {IUserLink} from "../../../../dto/i-user-link";
+import {H21ProfileUserLinksService} from "../../h21-profile-user-links/h21-profile-user-links.service";
 
 // Component Code
 
@@ -58,7 +59,8 @@ export class UserProfileComponent implements AfterContentChecked, OnInit {
 
 	constructor(protected httpClient: FakeHttpClientService,
 				protected activatedRoute: ActivatedRoute,
-				protected vocabulary: ProfileVocabularyService) {
+				protected vocabulary: ProfileVocabularyService,
+				protected profileUserLinks: H21ProfileUserLinksService) {
 
 		this.setValidator();
 
@@ -141,7 +143,7 @@ export class UserProfileComponent implements AfterContentChecked, OnInit {
 	}
 
 	addLink() {
-
+		this.profileUserLinks.open();
 	}
 
 	viewLink(id: number): void {

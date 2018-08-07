@@ -31,9 +31,8 @@ export class AppComponent {
 		private http: HttpClient,
 		private router: Router,
 		permissionService: PermissionService,
-		private rightPanelDialog: H21RightOverlayPanelService,
-		private _profileUserLinks: H21ProfileUserLinksService
-	) {
+		private rightPanelDialog: H21RightOverlayPanelService)
+	{
 		this.permissionService = permissionService;
 		if(this.permissionService.isAuth()) {
 			this.username = this.permissionService.getUsername();
@@ -78,9 +77,5 @@ export class AppComponent {
 
 	isDemo(): boolean {
 		return this.router.url.indexOf('/demo') == 0;
-	}
-
-	testLinks(): void {
-		this._profileUserLinks.open();
 	}
 }
