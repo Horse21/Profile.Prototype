@@ -29,6 +29,12 @@ import {UserProfileComponent} from "./components/profile/userProfile/user-profil
 import {UserProfileListComponent} from './components/profile/userProfile/user-profile-list/user-profile-list.component';
 import {H21ProfileUserLinksComponent} from './components/profile/h21-profile-user-links/h21-profile-user-links.component';
 import {H21ProfileUserLinksService} from './components/profile/h21-profile-user-links/h21-profile-user-links.service';
+import { AgentProfileListComponent } from './components/profile/agentProfile/agent-profile-list/agent-profile-list.component';
+import { AgentProfileComponent } from './components/profile/agentProfile/agent-profile/agent-profile.component';
+import { TravelerProfileComponent } from './components/profile/travelerProfile/traveler-profile/traveler-profile.component';
+import { TravelerProfileListComponent } from './components/profile/travelerProfile/traveler-profile-list/traveler-profile-list.component';
+import { ProviderProfileComponent } from './components/profile/providerProfile/provider-profile/provider-profile.component';
+import { ProviderProfileListComponent } from './components/profile/providerProfile/provider-profile-list/provider-profile-list.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -37,6 +43,11 @@ const routes: Routes = [
 	{path: 'dashboard', component: DashboardComponent},
 	{path: 'userProfile/:id', component: UserProfileComponent},
 	{path: 'users', component: UserProfileListComponent},
+	{path: 'agentProfile/:id', component: AgentProfileComponent},
+	{path: 'agents', component: AgentProfileListComponent},
+	{path: 'travelerProfile/:id', component: TravelerProfileComponent},
+	{path: 'travelers', component: TravelerProfileListComponent},
+	{path: 'providers', component: ProviderProfileListComponent},
 	{path: '**', redirectTo: 'dashboard'}
 ];
 
@@ -50,6 +61,12 @@ const routes: Routes = [
 			DashboardComponent,
 			UserProfileListComponent,
 			H21ProfileUserLinksComponent,
+			AgentProfileListComponent,
+			AgentProfileComponent,
+			TravelerProfileComponent,
+			TravelerProfileListComponent,
+			ProviderProfileComponent,
+			ProviderProfileListComponent,
 		],
 		imports: [
 			BrowserModule,
