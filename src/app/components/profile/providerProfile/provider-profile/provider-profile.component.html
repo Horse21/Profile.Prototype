@@ -52,9 +52,8 @@
 				<div class="row">
 					<div class="col-6">
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<mat-select placeholder="Provider" [disabled]="!editable">
-								<mat-option value="v1">Provider 1</mat-option>
-								<mat-option value="v2">Provider 2</mat-option>
+							<mat-select placeholder="Provider" [disabled]="!editable" [(ngModel)]="entity.typeId">
+								<mat-option *ngFor="let item of vocabulary.providerType" [value]="item.id">{{item.name}}</mat-option>
 							</mat-select>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">

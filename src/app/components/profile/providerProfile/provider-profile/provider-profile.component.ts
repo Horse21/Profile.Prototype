@@ -8,6 +8,7 @@ import {FakeHttpClientService} from "../../../../services/fake-http-client.servi
 import {IUserLink} from "../../../../dto/i-user-link";
 import {ProfileVocabularyService} from "../../../../services/profile-vocabulary.service";
 import {H21ProfileUserLinksService} from "../../h21-profile-user-links/h21-profile-user-links.service";
+import {IProviderProfileDto} from "../../../../dto/profile/i-provider-profile-dto";
 
 @Component({
   selector: 'app-provider-profile',
@@ -17,7 +18,7 @@ import {H21ProfileUserLinksService} from "../../h21-profile-user-links/h21-profi
 export class ProviderProfileComponent implements OnInit {
 
 	/** The agent */
-	@Input() entity: IAgentProfileDto = {};
+	@Input() entity: IProviderProfileDto = {};
 	/** Editable mode option */
 	@Input() editable: boolean = true;
 
@@ -46,29 +47,6 @@ export class ProviderProfileComponent implements OnInit {
 	}
 
 	setValidator(){
-		this.validator.register(
-			'entity.name',
-			() => {
-				return !!this.entity && !!this.entity.name
-			},
-			'Name cannot be empty'
-		);
-
-		this.validator.register(
-			'entity.code',
-			() => {
-				return !!this.entity && !!this.entity.code
-			},
-			'Code cannot be empty'
-		);
-
-		this.validator.register(
-			'entity.title',
-			() => {
-				return !!this.entity && !!this.entity.title
-			},
-			'Title cannot be empty'
-		);
 	}
 
 	setReferences() {
