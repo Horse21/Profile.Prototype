@@ -39,6 +39,8 @@ export class FakeHttpClientService {
 	horseCompanyList: IHorseCompanyListDto[] = require('../../data/horse-company-list.json');
 
 	constructor() {
+		var i = 0;
+		this.travelerProfile.forEach(e => e.id = ++i);
 	}
 
 	//#region UserProfile
