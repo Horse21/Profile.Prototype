@@ -9,7 +9,7 @@
 						[notifyList]="getNotifyList()">
 			</h21-header>
 			<h21-top-toolbar [showBreadcrumbs]="true"
-							 [breadcrumbsData]=""
+							 [breadcrumbsData]="breadcrumbsData"
 							 [showProfileUserCardActions]="true"></h21-top-toolbar>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 			</nav>
 
 			<nav class="sidebar_expand_nav" [class.__is-active]="isTmc()">
-				<a mat-button [routerLink]="['/agencies']" [class.__is-active]="isRoutes(['agencies', 'agencies'])">Agencies</a>
+				<a mat-button [routerLink]="['/agencies']" [class.__is-active]="isRoutes(['agencies', 'agencyProfile'])">Agencies</a>
 				<a mat-button [routerLink]="['/agents']" [class.__is-active]="isRoutes(['agents', 'agentProfile'])">Agents</a>
 				<a mat-button [routerLink]="['/providers']" [class.__is-active]="isRoutes(['providers', 'providerProfile'])">Providers</a>
 				<a mat-button [routerLink]="['/travelers']" [class.__is-active]="isRoutes(['travelers', 'travelerProfile'])">Traveler</a>
@@ -39,7 +39,7 @@
 				<!--<a mat-button>Reports</a>-->
 			</nav>
 
-			<div class="page_content">
+			<div class="page_content mat-typography">
 				<router-outlet></router-outlet>
 			</div>
 		</div>

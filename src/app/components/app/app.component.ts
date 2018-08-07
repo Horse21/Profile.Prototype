@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild } from '@angular/core';
+import { AfterContentChecked, Component, ViewChild} from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
 import { INotifyItem } from 'h21-be-ui-kit';
@@ -9,8 +9,7 @@ import { H21TopToolbarComponent } from 'h21-be-ui-kit';
 import { H21RightOverlayPanelService } from 'h21-be-ui-kit';
 import { AuthData } from '../../dto/auth-data';
 import { Router } from "@angular/router";
-import { H21ProfileUserLinksService } from './../profile/h21-profile-user-links/h21-profile-user-links.service';
-
+import { IBreadcrumb } from "h21-be-ui-kit/dto/i-breadcrumb";
 
 @Component({
   selector: 'app-root',
@@ -23,6 +22,8 @@ export class AppComponent {
 	@ViewChild(H21TopToolbarComponent) private toolbar: H21TopToolbarComponent;
 	title = 'prototype';
 	username: string;
+	breadcrumbsData: IBreadcrumb[];
+
 	private permissionService: PermissionService;
 
 	constructor(
@@ -93,9 +94,9 @@ export class AppComponent {
 			'travelers',
 			'agents',
 			'providers',
-			'agentProfile',
+			'agencyProfile',
 			'travelerProfile',
-			'agencies',
+			'agentProfile',
 			'providerProfile']);
 	}
 }
