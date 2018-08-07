@@ -65,16 +65,20 @@
 							</mat-error>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Vat Number" [readonly]="!editable"
-								   [(ngModel)]="entity.vatNumber" required>
-							<span matSuffix class="c-h21-profile-user-card_required"
-								  *ngIf="!validator.invalid('entity.vatNumber')">*</span>
-							<mat-icon matSuffix *ngIf="validator.invalid('entity.vatNumber')" color="warn">error
-							</mat-icon>
-							<mat-error *ngIf="validator.invalid('entity.vatNumber')">
-								{{validator.invalid('entity.vatNumber')}}
-							</mat-error>
+							<input matInput placeholder="Branding Name" [readonly]="!editable">
 						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<mat-select placeholder="Company Types" value="v1">
+								<mat-option value="v1">Value 1</mat-option>
+							</mat-select>
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<mat-select placeholder="Speciality" value="v1">
+								<mat-option value="v1">Value 1</mat-option>
+							</mat-select>
+						</mat-form-field>
+					</div>
+					<div class="col-6">
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
 							<input matInput placeholder="Company Registration Number" [readonly]="!editable"
 								   [(ngModel)]="entity.companyRegistrationNumber" required>
@@ -88,10 +92,31 @@
 							</mat-error>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Website" [readonly]="!editable" [(ngModel)]="entity.website">
+							<input matInput placeholder="Vat Number" [readonly]="!editable"
+								   [(ngModel)]="entity.vatNumber" required>
+							<span matSuffix class="c-h21-profile-user-card_required"
+								  *ngIf="!validator.invalid('entity.vatNumber')">*</span>
+							<mat-icon matSuffix *ngIf="validator.invalid('entity.vatNumber')" color="warn">error
+							</mat-icon>
+							<mat-error *ngIf="validator.invalid('entity.vatNumber')">
+								{{validator.invalid('entity.vatNumber')}}
+							</mat-error>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Email" [readonly]="!editable" [(ngModel)]="entity.email">
+							<input matInput placeholder="Code" [readonly]="!editable">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="About" [readonly]="!editable"
+								   [(ngModel)]="entity.description">
+						</mat-form-field>
+					</div>
+				</div>
+
+				<h5 class="c-h21-profile-user-card_subtitle">Contact fields</h5>
+				<div class="row">
+					<div class="col-6">
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="Web site" [readonly]="!editable" [(ngModel)]="entity.website">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
 							<input matInput placeholder="Phone" [readonly]="!editable" [(ngModel)]="entity.phone">
@@ -99,8 +124,17 @@
 					</div>
 					<div class="col-6">
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
+							<input matInput placeholder="General e-mail" [readonly]="!editable" [(ngModel)]="entity.email">
+						</mat-form-field>
+						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
 							<input matInput placeholder="Fax" [readonly]="!editable" [(ngModel)]="entity.fax">
 						</mat-form-field>
+					</div>
+				</div>
+
+				<h5 class="c-h21-profile-user-card_subtitle">Address</h5>
+				<div class="row">
+					<div class="col-6">
 						<mat-form-field class="c-h21-profile-user-card_form-field"
 										[class.__is-readonly]="!editable || !entity.countryCode">
 							<mat-select [(value)]="entity.countryCode" placeholder="Country">
@@ -119,6 +153,8 @@
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
 							<input matInput placeholder="Address" [readonly]="!editable" [(ngModel)]="entity.address">
 						</mat-form-field>
+					</div>
+					<div class="col-6">
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
 							<input matInput placeholder="Postcode" [readonly]="!editable" [(ngModel)]="entity.postcode">
 						</mat-form-field>
@@ -130,12 +166,13 @@
 							</mat-select>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="More information" [readonly]="!editable"
-								   [(ngModel)]="entity.description">
+							<mat-select placeholder="Status" value="a">
+								<mat-option value="a">Active</mat-option>
+								<mat-option value="b">Blocked</mat-option>
+							</mat-select>
 						</mat-form-field>
 					</div>
 				</div>
-
 				<div *ngIf="editable" class="c-h21-profile-user-card_action-buttons">
 					<button mat-stroked-button color="primary">Cancel</button>
 					<button mat-raised-button color="primary">Save</button>

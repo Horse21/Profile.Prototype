@@ -15,7 +15,7 @@
 	</div>
 	<div class="row no-gutters page_content-box">
 		<!--<div class="col-12 no-gutters __has-expanded-sidebar"> - меняем класс на __has-expanded-sidebar, если панель нафигации раскрыиа  -->
-		<div class="col-12 no-gutters __has-sidebar">
+		<div class="col-12 no-gutters __has-expanded-sidebar">
 			<nav class="sidebar_nav">
 				<a mat-button [routerLink]="['/dashboard']" [class.is-active]="isRoute('dashboard')">
 					<mat-icon>apps</mat-icon>
@@ -34,13 +34,13 @@
 					<span>Agencies</span>
 				</a>
 			</nav>
-			<!--<nav class="sidebar_expand_nav">-->
-				<!--<a href="/tmc/agencies">Agencies</a>-->
-				<!--<a href="/tmc/agents" class="__is-selected">Agents</a>-->
-				<!--<a href="/tmc/corporate">Corporate</a>-->
-				<!--<a href="/tmc/traveler">Traveler</a>-->
-				<!--<a href="/tmc/reports">Reports</a>-->
-			<!--</nav>-->
+			<nav class="sidebar_expand_nav">
+				<a href="/tmc/agencies">Agencies</a>
+				<a href="/tmc/agents" class="__is-selected">Agents</a>
+				<a href="/tmc/corporate">Corporate</a>
+				<a href="/tmc/traveler">Traveler</a>
+				<a href="/tmc/reports">Reports</a>
+			</nav>
 			<div class="page_content">
 				<router-outlet></router-outlet>
 			</div>
