@@ -26,7 +26,7 @@
 		"bootstrap": "4.1.1",
 		"core-js": "^2.5.3",
 		"es6-shim": "^0.35.3",
-		"h21-be-ui-kit": "^0.0.11327",
+		"h21-be-ui-kit": "^0.0.11330",
 		"h21-custom-css": "^1.0.1610",
 		"ng2-charts": "^1.6.0",
 		"ng2-nouislider": "1.7.11",

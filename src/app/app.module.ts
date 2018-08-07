@@ -18,17 +18,17 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {H21ProfileUserCardComponent} from './components/profile/h21-profile-user-card/h21-profile-user-card.component';
 import {ProfileUserCardDemoComponent} from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
-import { DemoComponent } from './components/demo/demo/demo.component';
-import { UserProfileComponent } from './components/profile/userProfile/user-profile/user-profile.component';
-import { DashboardComponent } from './components/demo/dashboard/dashboard.component';
-import { ChartsModule } from 'ng2-charts';
+import {DemoComponent} from './components/demo/demo/demo.component';
+import {UserProfileComponent} from './components/profile/userProfile/user-profile/user-profile.component';
+import {DashboardComponent} from './components/demo/dashboard/dashboard.component';
+import {ChartsModule} from 'ng2-charts';
 
 const routes: Routes = [
-	{path: '', redirectTo: '/', pathMatch: 'full'},
+	{path: '', component: DashboardComponent, pathMatch: 'full'},
 	{path: 'userProfile/:id', component: UserProfileComponent},
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
-	{ path: 'demo/dashboard', component: DashboardComponent },
+	{path: 'dashboard', component: DashboardComponent},
 	{path: '**', redirectTo: '/'},
 ];
 
@@ -54,7 +54,8 @@ const routes: Routes = [
 			NouisliderModule,
 			H21HeaderModule,
 			H21SidebarModule,
-			H21TopToolbarModule
+			H21TopToolbarModule,
+			ChartsModule
 		],
 		providers: [
 			{
