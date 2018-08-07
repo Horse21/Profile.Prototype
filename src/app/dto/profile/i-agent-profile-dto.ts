@@ -13,4 +13,5 @@ export interface IAgentProfileDto extends IBaseProfileDto {
 	surname?: string;
 	title?: string;
 	updateDate?: IH21DateTime;
+	phone?: string;
 }
