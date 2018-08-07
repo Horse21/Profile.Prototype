@@ -20,12 +20,15 @@ import {H21ProfileUserCardComponent} from './components/profile/h21-profile-user
 import {ProfileUserCardDemoComponent} from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
 import { DemoComponent } from './components/demo/demo/demo.component';
 import { UserProfileComponent } from './components/profile/userProfile/user-profile/user-profile.component';
+import { DashboardComponent } from './components/demo/dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts';
 
 const routes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
 	{path: 'userProfile/:id', component: UserProfileComponent},
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
+	{ path: 'demo/dashboard', component: DashboardComponent },
 	{path: '**', redirectTo: '/'},
 ];
 
@@ -35,7 +38,8 @@ const routes: Routes = [
 			H21ProfileUserCardComponent,
 			ProfileUserCardDemoComponent,
 			DemoComponent,
-			UserProfileComponent
+			UserProfileComponent,
+			DashboardComponent
 		],
 		imports: [
 			BrowserModule,
