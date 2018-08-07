@@ -27,6 +27,8 @@ import {DashboardComponent} from './components/demo/dashboard/dashboard.componen
 import {ChartsModule} from 'ng2-charts';
 import {UserProfileComponent} from "./components/profile/userProfile/user-profile/user-profile.component";
 import {UserProfileListComponent} from './components/profile/userProfile/user-profile-list/user-profile-list.component';
+import {H21ProfileUserLinksComponent} from './components/profile/h21-profile-user-links/h21-profile-user-links.component';
+import {H21ProfileUserLinksService} from './components/profile/h21-profile-user-links/h21-profile-user-links.service';
 
 const routes: Routes = [
 	{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -46,7 +48,8 @@ const routes: Routes = [
 			DemoComponent,
 			UserProfileComponent,
 			DashboardComponent,
-			UserProfileListComponent
+			UserProfileListComponent,
+			H21ProfileUserLinksComponent,
 		],
 		imports: [
 			BrowserModule,
@@ -74,11 +77,14 @@ const routes: Routes = [
 				useClass: ProfileVocabularyService
 			},
 			H21RightOverlayPanelService,
+			H21ProfileUserLinksService,
 			AppSubscriberService,
 			OrderService
 		],
 		bootstrap: [AppComponent],
-		entryComponents: []
+		entryComponents: [
+			H21ProfileUserLinksComponent
+		]
 	}
 )
 export class AppModule {
