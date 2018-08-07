@@ -1,0 +1,115 @@
+<div class="c-h21-profile-user-links" [@toggleVisibility]="animationState"
+	 (@toggleVisibility.start)="onAnimationStart($event)"
+	 (@toggleVisibility.done)="onAnimationDone($event)">
+
+	<div class="c-h21-profile-user-links_header">
+		<button mat-icon-button (click)="close()" class="c-h21-profile-user-links_close-button">
+			<mat-icon>close</mat-icon>
+		</button>
+		<h4>User links</h4>
+	</div>
+
+	<mat-horizontal-stepper [linear]="true">
+
+		<!-- Step 1. Select agency -->
+		<mat-step>
+			<ng-template matStepLabel>Select agency</ng-template>
+			<div class="c-h21-profile-user-links_stepper-content-wrapper">
+				<div class="c-h21-profile-user-links_search">
+					<mat-form-field [floatLabel]="'never'">
+						<input matInput placeholder="Name Agency">
+						<mat-icon matSuffix="">search</mat-icon>
+					</mat-form-field>
+				</div>
+				<div class="c-h21-profile-user-links_search-result">
+					<mat-list class="c-h21-profile-user-links_card-list">
+						<mat-list-item *ngFor="let item of agencyData">
+							<mat-card class="c-h21-profile-user-links_card" [class.__is-selected]="item.selected">
+								<mat-card-header>
+									<img src="" mat-card-avatar alt="" />
+									<mat-card-title>{{item.name}}</mat-card-title>
+									<mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+									<span class="c-h21-profile-user-links_card-detail">{{item.detail}}</span>
+								</mat-card-header>
+								<mat-card-actions>
+									<button mat-raised-button class="c-h21-profile-user-links_card-select-button" color="primary" *ngIf="!item.selected">
+										<mat-icon>add</mat-icon>
+									</button>
+									<button mat-raised-button class="c-h21-profile-user-links_card-deselect-button" color="warn" *ngIf="item.selected">
+										<mat-icon>close</mat-icon>
+									</button>
+								</mat-card-actions>
+							</mat-card>
+						</mat-list-item>
+					</mat-list>
+				</div>
+			</div>
+			<div class="c-h21-profile-user-links_stepper-actions">
+				<div class="row no-gutters">
+					<div class="col-6">&nbsp;</div>
+					<div class="col-6 __text-right"><button mat-raised-button matStepperNext color="primary">Next</button></div>
+				</div>
+			</div>
+		</mat-step>
+
+		<!-- Step 2. Select branch -->
+		<mat-step>
+			<ng-template matStepLabel>Select branch</ng-template>
+			<div class="c-h21-profile-user-links_stepper-content-wrapper">
+				<div class="c-h21-profile-user-links_search">
+					<mat-form-field [floatLabel]="'never'">
+						<input matInput placeholder="Name branch">
+						<mat-icon matSuffix="">search</mat-icon>
+					</mat-form-field>
+				</div>
+				<div class="c-h21-profile-user-links_search-result">
+					<mat-list class="c-h21-profile-user-links_card-list">
+						<mat-list-item *ngFor="let item of branchData">
+							<mat-card class="c-h21-profile-user-links_card" [class.__is-selected]="item.selected">
+								<mat-card-header>
+									<img src="" mat-card-avatar alt="" />
+									<mat-card-title>{{item.name}}</mat-card-title>
+									<mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+									<span class="c-h21-profile-user-links_card-detail">{{item.detail}}</span>
+								</mat-card-header>
+								<mat-card-actions>
+									<button mat-raised-button class="c-h21-profile-user-links_card-select-button" color="primary" *ngIf="!item.selected">
+										<mat-icon>add</mat-icon>
+									</button>
+									<button mat-raised-button class="c-h21-profile-user-links_card-deselect-button" color="warn" *ngIf="item.selected">
+										<mat-icon>close</mat-icon>
+									</button>
+								</mat-card-actions>
+							</mat-card>
+						</mat-list-item>
+					</mat-list>
+				</div>
+			</div>
+			<div class="c-h21-profile-user-links_stepper-actions">
+				<div class="row no-gutters">
+					<div class="col-6"><button mat-raised-button matStepperPrevious color="primary">Prev</button></div>
+					<div class="col-6 __text-right"><button mat-raised-button matStepperNext color="primary">Next</button></div>
+				</div>
+			</div>
+		</mat-step>
+
+		<!-- Step 3. Select role -->
+		<mat-step>
+			<ng-template matStepLabel>Select role</ng-template>
+			<div class="c-h21-profile-user-links_stepper-content-wrapper">
+				<div class="c-h21-profile-user-links_checkboxes-group">
+					<mat-checkbox color="primary">Traveler</mat-checkbox>
+					<mat-checkbox color="primary">Agent</mat-checkbox>
+					<mat-checkbox color="primary">Manager</mat-checkbox>
+				</div>
+			</div>
+			<div class="c-h21-profile-user-links_stepper-actions">
+				<div class="row no-gutters">
+					<div class="col-6"><button mat-raised-button matStepperPrevious color="primary">Prev</button></div>
+					<div class="col-6 __text-right"><button mat-raised-button matStepperNext color="primary">Save</button></div>
+				</div>
+			</div>
+		</mat-step>
+
+	</mat-horizontal-stepper>
+</div>

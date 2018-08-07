@@ -19,6 +19,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {H21ProfileUserCardComponent} from './components/profile/h21-profile-user-card/h21-profile-user-card.component';
 import {ProfileUserCardDemoComponent} from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
 import { DemoComponent } from './components/demo/demo/demo.component';
+import {H21ProfileUserLinksComponent} from './components/profile/h21-profile-user-links/h21-profile-user-links.component';
+import {H21ProfileUserLinksService} from './components/profile/h21-profile-user-links/h21-profile-user-links.service';
+
 
 const routes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
@@ -32,7 +35,8 @@ const routes: Routes = [
 			AppComponent,
 			H21ProfileUserCardComponent,
 			ProfileUserCardDemoComponent,
-			DemoComponent
+			DemoComponent,
+			H21ProfileUserLinksComponent
 		],
 		imports: [
 			BrowserModule,
@@ -59,11 +63,14 @@ const routes: Routes = [
 				useClass: ProfileVocabularyService
 			},
 			H21RightOverlayPanelService,
+			H21ProfileUserLinksService,
 			AppSubscriberService,
 			OrderService
 		],
 		bootstrap: [AppComponent],
-		entryComponents: []
+		entryComponents: [
+			H21ProfileUserLinksComponent
+		]
 	}
 )
 export class AppModule {

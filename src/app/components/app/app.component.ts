@@ -8,7 +8,9 @@ import { H21SidebarComponent } from 'h21-be-ui-kit';
 import { H21TopToolbarComponent } from 'h21-be-ui-kit';
 import { H21RightOverlayPanelService } from 'h21-be-ui-kit';
 import { AuthData } from '../../dto/auth-data';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
+import { H21ProfileUserLinksService } from './../profile/h21-profile-user-links/h21-profile-user-links.service';
+
 
 @Component({
   selector: 'app-root',
@@ -29,7 +31,8 @@ export class AppComponent {
 		private http: HttpClient,
 		private router: Router,
 		permissionService: PermissionService,
-		private rightPanelDialog: H21RightOverlayPanelService
+		private rightPanelDialog: H21RightOverlayPanelService,
+		private _profileUserLinks: H21ProfileUserLinksService
 	) {
 		this.permissionService = permissionService;
 		if(this.permissionService.isAuth()) {
@@ -75,5 +78,9 @@ export class AppComponent {
 
 	isDemo(): boolean {
 		return this.router.url.indexOf('/demo') == 0;
+	}
+
+	testLinks(): void {
+		this._profileUserLinks.open();
 	}
 }

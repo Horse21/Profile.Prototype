@@ -14,23 +14,31 @@
 		</div>
 	</div>
 	<div class="row no-gutters page_content-box">
-		<div class="col-12 no-gutters __has-sidebar">
+		<div class="col-12 no-gutters __has-sidebar __has-expanded-sidebar">
 			<nav class="sidebar_nav">
-				<a mat-button href="/profile_demo/board" class="is-active">
+				<a mat-button href="/board">
 					<mat-icon>apps</mat-icon>
 					<span>Board</span>
 				</a>
-				<a mat-button href="/profile_demo/tmc">
+				<a mat-button href="/tmc" class="is-active">
 					<mat-icon>domain</mat-icon>
 					<span>TMC</span>
 				</a>
-				<a mat-button href="/profile_demo/users">
+				<a mat-button href="/users">
 					<mat-icon>person</mat-icon>
 					<span>Users</span>
 				</a>
 			</nav>
+			<nav class="sidebar_expand_nav">
+				<a href="/tmc/agencies">Agencies</a>
+				<a href="/tmc/agents" class="__is-selected">Agents</a>
+				<a href="/tmc/corporate">Corporate</a>
+				<a href="/tmc/traveler">Traveler</a>
+				<a href="/tmc/reports">Reports</a>
+			</nav>
 			<div class="page_content">
 				<router-outlet></router-outlet>
+				<button mat-raised-button color="primary" (click)="testLinks()">Test links</button>
 			</div>
 		</div>
 	</div>
