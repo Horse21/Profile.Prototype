@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NouisliderModule } from 'ng2-nouislider';
-import { ProfilePermissionService } from './services/profile-permission.service';
-import { ProfileVocabularyService } from './services/profile-vocabulary.service';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {NouisliderModule} from 'ng2-nouislider';
+import {ProfilePermissionService} from './services/profile-permission.service';
+import {ProfileVocabularyService} from './services/profile-vocabulary.service';
 import {
 	AppSubscriberService,
 	H21HeaderModule,
@@ -13,25 +13,26 @@ import {
 	PermissionService,
 	VocabularyService
 } from 'h21-be-ui-kit';
-import { MatInputModule, MatNativeDateModule } from '@angular/material';
-import { AppComponent } from './components/app/app.component';
-import { RouterModule, Routes } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from './modules/app-material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { H21ProfileUserCardComponent } from './components/profile/h21-profile-user-card/h21-profile-user-card.component';
-import { ProfileUserCardDemoComponent } from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
-import { DemoComponent } from './components/demo/demo/demo.component';
-import { DashboardComponent } from './components/demo/dashboard/dashboard.component';
-import { ChartsModule } from 'ng2-charts';
+import {MatInputModule, MatNativeDateModule} from '@angular/material';
+import {AppComponent} from './components/app/app.component';
+import {RouterModule, Routes} from '@angular/router';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppMaterialModule} from './modules/app-material.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {H21ProfileUserCardComponent} from './components/profile/h21-profile-user-card/h21-profile-user-card.component';
+import {ProfileUserCardDemoComponent} from './components/demo/profile-user-card-demo/profile-user-card-demo.component';
+import {DemoComponent} from './components/demo/demo/demo.component';
+import {DashboardComponent} from './components/demo/dashboard/dashboard.component';
+import {ChartsModule} from 'ng2-charts';
+import {UserProfileComponent} from "./components/profile/userProfile/user-profile/user-profile.component";
 
 const routes: Routes = [
-	{path: '', redirectTo: '/', pathMatch: 'full'},
+	{path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 	{path: 'demo', component: DemoComponent},
 	{path: 'demo/profileusercard', component: ProfileUserCardDemoComponent},
-	{ path: 'demo/dashboard', component: DashboardComponent },
-	{ path: '**', redirectTo: 'demo/dashboard' }
+	{path: 'dashboard', component: DashboardComponent},
+	{path: '**', redirectTo: 'dashboard'}
 ];
 
 @NgModule({
