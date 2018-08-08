@@ -58,6 +58,13 @@
 	margin: 32px 0;
 }
 
+.profile-table_row-hover:hover {
+	td.mat-cell {
+		background-color: #f0f0f0;
+		cursor: pointer;
+	}
+}
+
 //----------------------------------------------------------------------------------------------------------------------
 // h21-profile-user-links component
 .c-h21-profile-user-links {

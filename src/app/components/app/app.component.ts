@@ -99,4 +99,8 @@ export class AppComponent {
 			'agentProfile',
 			'providerProfile']);
 	}
+	test() {
+		this.router.navigateByUrl('/agencyProfile/1')
+		//this.router.navigate(['/parent/detail']);
+	}
 }

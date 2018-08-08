@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
 	selector: 'app-provider-profile-list',
@@ -7,10 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ProviderProfileListComponent implements OnInit {
 
-	constructor() {
+	constructor(private _router: Router) {
 	}
 
 	ngOnInit() {
+	}
+
+	openCard(id: string): void {
+		this._router.navigateByUrl(`/providerProfile/${id}`);
 	}
 
 	displayedColumns: string[] = ['name', 'type', 'createdby', 'change', 'status', 'action'];
@@ -27,7 +32,7 @@ export interface TableProviders {
 }
 
 const ELEMENT_DATA: TableProviders[] = [
-	{id: 1, name: 'Travelport', type: 'GDS', createdby: 'John Doe', change: '07.25.18', status: 'Active'},
-	{id: 2, name: 'Travelport Profiles', type: 'Profiles', createdby: 'Jane Doe', change: '07.25.18', status: 'Active'},
-	{id: 3, name: 'Holiday Taxis', type: 'Transfer', createdby: 'James Doe', change: '08.25.18', status: 'Active'},
+	{id: 1, name: 'Travelport', type: 'GDS', createdby: 'John Doe', change: '07/25/2018', status: 'Active'},
+	{id: 2, name: 'Travelport Profiles', type: 'Profiles', createdby: 'Jane Doe', change: '07/25/2018', status: 'Active'},
+	{id: 3, name: 'Holiday Taxis', type: 'Transfer', createdby: 'James Doe', change: '08/25/2018', status: 'Active'},
 ];

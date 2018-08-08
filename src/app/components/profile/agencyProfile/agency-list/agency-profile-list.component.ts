@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FakeHttpClientService } from 'app/services/fake-http-client.service';
-import { ProfileVocabularyService } from 'app/services/profile-vocabulary.service';
-import { IAgencyProfileListDto } from 'app/dto/profile/i-agency-profile-list-dto';
+import { FakeHttpClientService } from "../../../../services/fake-http-client.service";
+import { ProfileVocabularyService } from "../../../../services/profile-vocabulary.service";
+import { IAgencyProfileListDto } from "../../../../dto/profile/i-agency-profile-list-dto";
+import { Router } from "@angular/router";
 
 @Component({
 	selector: 'app-agency-profile-list',
@@ -14,7 +15,8 @@ export class AgencyProfileListComponent implements OnInit {
 	displayedColumns: string[] = ['logo', 'name', 'type', 'createDate', 'updateDate', 'stateId', 'action'];
 
 	constructor(protected httpClient: FakeHttpClientService,
-				protected vocabulary: ProfileVocabularyService) {
+				protected vocabulary: ProfileVocabularyService,
+				private _router: Router) {
 	}
 
 	ngOnInit() {
@@ -25,5 +27,9 @@ export class AgencyProfileListComponent implements OnInit {
 			this.dataSource.forEach(x => x.type = 'Regional');
 			this.httpClient.setUpdateDate(this.dataSource);
 		});
+	}
+
+	openCard(id: string): void {
+		this._router.navigateByUrl(`/agencyProfile/${id}`);
 	}
 }
