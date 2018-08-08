@@ -141,6 +141,7 @@ export class AgencyProfileComponent implements OnInit {
 			this.httpClient.getAgencyProfile(this.entityId)
 			.subscribe(entity => {
 					this.entity = entity;
+					this.entity.legalName = this.entity.name;
 					this.countrySelected();
 				},
 				error => {
