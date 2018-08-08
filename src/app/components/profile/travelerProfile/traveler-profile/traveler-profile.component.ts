@@ -101,6 +101,7 @@ export class TravelerProfileComponent implements OnInit {
 			this.httpClient.getTravelerProfile(this.entityId)
 				.subscribe(entity => {
 						this.entity = entity;
+						this.entity.code = `${this.entity.name.toLowerCase()}${this.entity.otherName}`;
 					},
 					error => {
 						console.log(error);
