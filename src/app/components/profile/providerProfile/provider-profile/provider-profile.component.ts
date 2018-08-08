@@ -42,8 +42,6 @@ export class ProviderProfileComponent implements OnInit {
 				protected profileUserLinks: H21ProfileUserLinksService) {
 
 		this.setValidator();
-
-		this.setReferences();
 	}
 
 	setValidator(){
@@ -93,6 +91,7 @@ export class ProviderProfileComponent implements OnInit {
 				this.httpClient.getProviderProfile(this.entityId)
 					.subscribe(entity => {
 							this.entity = entity;
+							this.setReferences();
 						},
 						error => {
 							console.log(error);
