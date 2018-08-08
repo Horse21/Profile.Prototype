@@ -22,6 +22,10 @@ export class ProviderProfileListComponent implements OnInit {
 
 	displayedColumns: string[] = ['name', 'typeId', 'createdby', 'change', 'stateId', 'action'];
 	dataSource = ELEMENT_DATA;
+
+	createProvider(){
+		this._router.navigate(['/providerProfile', 0]);
+	}
 }
 
 export interface TableProviders {
@@ -34,7 +38,7 @@ export interface TableProviders {
 }
 
 const ELEMENT_DATA: TableProviders[] = [
-	{id: 1, name: 'Travelport', typeId: 1, createdby: 'John Doe', change: '07/25/2018', stateId: 1},
-	{id: 2, name: 'Travelport Profiles', typeId: 9, createdby: 'Jane Doe', change: '07/25/2018', stateId: 2},
-	{id: 3, name: 'Holiday Taxis', typeId: 2, createdby: 'James Doe', change: '08/25/2018', stateId: 3},
+	{id: 1, name: 'Travelport', typeId: 1, createdby: 'John Doe', change: '06.15.18 16:30', stateId: 1},
+	{id: 2, name: 'Travelport Profiles', typeId: 9, createdby: 'Jane Doe', change: '04.03.18 17:30', stateId: 2},
+	{id: 3, name: 'Holiday Taxis', typeId: 2, createdby: 'James Doe', change: '07.10.18 03:04', stateId: 3},
 ];

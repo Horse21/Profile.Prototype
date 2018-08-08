@@ -7,7 +7,7 @@
 
 	<ng-container matColumnDef="typeId">
 		<th mat-header-cell *matHeaderCellDef> Type </th>
-		<td mat-cell *matCellDef="let element"> {{vocabulary.nameById(vocabulary.providerType, element.typeId)}} </td>
+		<td mat-cell *matCellDef="let element"> {{vocabulary.fieldById(vocabulary.providerType, element.typeId, 'group')}} </td>
 	</ng-container>
 
 	<ng-container matColumnDef="createdby">
@@ -35,6 +35,6 @@
 	<tr mat-row *matRowDef="let element; columns: displayedColumns;" class="profile-table_row-hover" (click)="openCard(element.id)"></tr>
 </table>
 
-<button mat-fab class="fixed-add-button" color="primary">
+<button mat-fab class="fixed-add-button" color="primary" (click)="createProvider()">
 	<mat-icon>add</mat-icon>
 </button>

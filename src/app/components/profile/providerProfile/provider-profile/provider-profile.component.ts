@@ -89,13 +89,15 @@ export class ProviderProfileComponent implements OnInit {
 		this.activatedRoute.params.subscribe(params => {
 			this.entityId = +params['id'];
 			this.actionInProgress = true;
-			this.httpClient.getProviderProfile(this.entityId)
-				.subscribe(entity => {
-						this.entity = entity;
-					},
-					error => {
-						console.log(error);
-					});
+			if (this.entityId > 0) {
+				this.httpClient.getProviderProfile(this.entityId)
+					.subscribe(entity => {
+							this.entity = entity;
+						},
+						error => {
+							console.log(error);
+						});
+			}
 		});
 	}
 }

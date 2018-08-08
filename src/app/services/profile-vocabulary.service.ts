@@ -78,15 +78,15 @@ export class ProfileVocabularyService implements VocabularyService {
 	reportState = this.stateByStateMachineCode('report');
 
 	providerType = [
-		{id: 1, code: 'travelport', name: 'Travelport', group: 'GDS Providers'},
-		{id: 2, code: 'holidayTaxis', name: 'Holiday Taxis', group: 'Transfer Providers'},
-		{id: 3, code: 'hotelBeds', name: 'Hotel Beds', group: 'Transfer Providers'},
-		{id: 4, code: 'get-E', name: 'Get-E', group: 'Transfer Providers'},
-		{id: 5, code: 'blackLane', name: 'Black Lane', group: 'Transfer Providers'},
-		{id: 6, code: 'i\'way', name: 'I\'way', group: 'Transfer Providers'},
-		{id: 7, code: 'kiwiTaxi', name: 'Kiwi Taxi', group: 'Transfer Providers'},
-		{id: 8, code: 'openCabs', name: 'Open Cabs', group: 'Transfer Providers'},
-		{id: 9, code: 'travelportProfile', name: 'Travelport Profiles', group: 'Profiles Providers'}
+		{id: 1, code: 'travelport', name: 'Travelport', group: 'GDS'},
+		{id: 2, code: 'holidayTaxis', name: 'Holiday Taxis', group: 'Transfer'},
+		{id: 3, code: 'hotelBeds', name: 'Hotel Beds', group: 'Transfer'},
+		{id: 4, code: 'get-E', name: 'Get-E', group: 'Transfer'},
+		{id: 5, code: 'blackLane', name: 'Black Lane', group: 'Transfer'},
+		{id: 6, code: 'i\'way', name: 'I\'way', group: 'Transfer'},
+		{id: 7, code: 'kiwiTaxi', name: 'Kiwi Taxi', group: 'Transfer'},
+		{id: 8, code: 'openCabs', name: 'Open Cabs', group: 'Transfer'},
+		{id: 9, code: 'travelportProfile', name: 'Travelport Profiles', group: 'Profiles'}
 	];
 
 	travelportPnrServiceRole = [
@@ -304,6 +304,11 @@ export class ProfileVocabularyService implements VocabularyService {
 		return value ? value['name'] : '';
 	};
 
+	fieldById(vocabulary: any[], id: number, field: string): any {
+		var value = vocabulary.find(e => e.id == id);
+		return value ? value[field] : '';
+	};
+
 	stateByStateMachineCode(code: string): any[] {
 		return this.state.filter(e => e.stateMachineCode === code);
 	}
@@ -333,7 +338,7 @@ export class ProfileVocabularyService implements VocabularyService {
 	public getLanguages(): Observable<any[]> {
 		return this._http.get<City[]>("../../assets/prototype-storage/Languages.json");
 	}
-	
+
 	public getCurrencies(): Observable<any[]> {
 		return this._http.get<any[]>('../../assets/prototype-storage/Currencies.json');
 	}
