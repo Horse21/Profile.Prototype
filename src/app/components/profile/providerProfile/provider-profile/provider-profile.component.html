@@ -57,48 +57,47 @@
 							</mat-select>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Name" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Name" [readonly]="!editable" [(ngModel)]="entity.name">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Code" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Code" [readonly]="!editable" [(ngModel)]="entity.code">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Description" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Description" [readonly]="!editable" [(ngModel)]="entity.description">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<mat-select placeholder="Status" [disabled]="!editable" value="a">
-								<mat-option value="a">Active</mat-option>
-								<mat-option value="b">Blocked</mat-option>
+							<mat-select placeholder="Status" [disabled]="!editable" [(ngModel)]="entity.stateId">
+								<mat-option *ngFor="let item of vocabulary.userProfileState" [value]="item.id">{{item.name}}</mat-option>
 							</mat-select>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Connection state" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Connection state" [readonly]="!editable" [(ngModel)]="entity.checkState">
 						</mat-form-field>
 					</div>
 					<div class="col-6">
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Endpoint" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Endpoint" [readonly]="!editable" [(ngModel)]="entity.endpoint">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Login" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Login" [readonly]="!editable" [(ngModel)]="entity.login">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="Password" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="Password" [readonly]="!editable" [(ngModel)]="entity.password">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<mat-select placeholder="GTargetBranch" [disabled]="!editable" value="a">
-								<mat-option value="v1">GTargetBranch 1</mat-option>
-								<mat-option value="v2">GTargetBranch 2</mat-option>
+							<mat-select placeholder="GTargetBranch" [disabled]="!editable"[(ngModel)]="entity.gTargetBranch">
+								<mat-option value="g1">GTargetBranch 1</mat-option>
+								<mat-option value="g2">GTargetBranch 2</mat-option>
 							</mat-select>
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="PTargetBranch" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="PTargetBranch" [readonly]="!editable" [(ngModel)]="entity.pTargetBranch">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="VTargetBranch" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="VTargetBranch" [readonly]="!editable" [(ngModel)]="entity.vTargetBranch">
 						</mat-form-field>
 						<mat-form-field class="c-h21-profile-user-card_form-field" [class.__is-readonly]="!editable">
-							<input matInput placeholder="TRMTargetBranch" [readonly]="!editable" [value]="''">
+							<input matInput placeholder="TRMTargetBranch" [readonly]="!editable" [(ngModel)]="entity.trmTargetBranch">
 						</mat-form-field>
 					</div>
 				</div>

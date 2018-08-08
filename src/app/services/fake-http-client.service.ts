@@ -15,6 +15,7 @@ import { IClaim } from '../dto/i-claim';
 import { IUserLink } from '../dto/i-user-link';
 import { ITravelerProfileDto } from '../dto/profile/i-traveler-profile-dto';
 import { ITravelerProfileListDto } from '../dto/profile/i-traveler-profile-list-dto';
+import {IProviderProfileDto} from "../dto/profile/i-provider-profile-dto";
 
 declare var require: any;
 
@@ -37,6 +38,8 @@ export class FakeHttpClientService {
 
 	horseCompany: IHorseCompanyDto[] = require('../../data/horse-company.json');
 	horseCompanyList: IHorseCompanyListDto[] = require('../../data/horse-company-list.json');
+
+	providerProfile: IProviderProfileDto[] = require('../../data/provider-profile.json');
 
 	constructor() {
 		var i = 0;
@@ -113,6 +116,10 @@ export class FakeHttpClientService {
 
 	postQueryHorseCompany(): Observable<IHorseCompanyListDto[]> {
 		return observableOf(this.horseCompanyList);
+	}
+
+	getProviderProfile(id : number): Observable<IProviderProfileDto> {
+		return observableOf(this.providerProfile.find(e => e.id == id));
 	}
 
 	getHistory(): IHistory[] {

@@ -5,9 +5,9 @@
 		<td mat-cell *matCellDef="let element">{{element.name}}</td>
 	</ng-container>
 
-	<ng-container matColumnDef="type">
+	<ng-container matColumnDef="typeId">
 		<th mat-header-cell *matHeaderCellDef> Type </th>
-		<td mat-cell *matCellDef="let element"> {{element.type}} </td>
+		<td mat-cell *matCellDef="let element"> {{vocabulary.nameById(vocabulary.providerType, element.typeId)}} </td>
 	</ng-container>
 
 	<ng-container matColumnDef="createdby">
@@ -20,9 +20,9 @@
 		<td mat-cell *matCellDef="let element"> {{element.change}} </td>
 	</ng-container>
 
-	<ng-container matColumnDef="status">
+	<ng-container matColumnDef="stateId">
 		<th mat-header-cell *matHeaderCellDef> Status </th>
-		<td mat-cell *matCellDef="let element"> {{element.status}} </td>
+		<td mat-cell *matCellDef="let element"> {{vocabulary.nameById(vocabulary.state, element.stateId)}} </td>
 	</ng-container>
 	<ng-container matColumnDef="action">
 		<th mat-header-cell *matHeaderCellDef></th>
