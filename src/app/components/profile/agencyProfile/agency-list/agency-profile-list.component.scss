@@ -10,10 +10,12 @@ $h21-gray-57: #757575;
     }
     .logo, .avatar {
         display: block;
-        height: 24px;
-        width: auto;
         margin-left: 15px;
-    }
+		width: 54px !important;
+		height: 54px !important;
+		border-radius: 50%;
+		overflow: hidden;
+	}
     .title {
         font-size: 20px;
         color:	$h21-fg-ashen-blue;

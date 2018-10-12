@@ -1,49 +1,122 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterContentChecked, Component, ViewChild} from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MatIconRegistry } from '@angular/material';
-import { INotifyItem } from 'h21-be-ui-kit';
-import { PermissionService } from 'h21-be-ui-kit';
-import { H21SidebarComponent } from 'h21-be-ui-kit';
-import { H21TopToolbarComponent } from 'h21-be-ui-kit';
-import { H21RightOverlayPanelService } from 'h21-be-ui-kit';
+import { AfterContentChecked, Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material';
+import {
+	INotifyItem,
+	H21TopToolbarComponent,
+	H21RightOverlayPanelService,
+	IUserCardData,
+	IToolbarElement,
+	IBreadcrumb
+} from 'h21-be-ui-kit';
+import { ISidebarNavTab } from 'h21-be-ui-kit/dto';
 import { AuthData } from '../../dto/auth-data';
-import { Router } from "@angular/router";
-import { IBreadcrumb } from "h21-be-ui-kit/dto/i-breadcrumb";
+import {NavigationEnd, Router} from "@angular/router";
+
+const SIDEBAR_NAV_TABS: Array<ISidebarNavTab> = [
+	{name: 'board', label: 'Board', icon: 'apps', type: 'link', url: '/dashboard', disabled: false},
+	{name: 'tmc', label: 'TMC', icon: 'domain', type: 'link', url: '/agencies', disabled: false},
+	{name: 'users', label: 'Users', icon: 'person', type: 'link', url: '/users', disabled: false}
+];
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  viewProviders: [MatIconRegistry],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-	@ViewChild(H21SidebarComponent) private sidebar: H21SidebarComponent;
-	@ViewChild(H21TopToolbarComponent) private toolbar: H21TopToolbarComponent;
-	title = 'prototype';
-	username: string;
-	breadcrumbsData: IBreadcrumb[];
 
-	private permissionService: PermissionService;
+export class AppComponent implements AfterContentChecked {
+	@ViewChild('sidenav') private sidenav: MatSidenav;
+	@ViewChild(H21TopToolbarComponent) private toolbar: H21TopToolbarComponent;
+
+	breadcrumbs: IBreadcrumb[];
+	toolbarActions: IToolbarElement[];
+
+	userName: string;
+	userCardData: IUserCardData;
+	sidenavOpened: boolean;
+	sidebarNavDisabled: boolean;
+	sidebarNavTabs: Array<ISidebarNavTab> = SIDEBAR_NAV_TABS;
+	sidebarNavActiveTab: string;
+	contentSidenavHasBackdrop: boolean;
 
 	constructor(
-		iconReg: MatIconRegistry,
-		sanitizer: DomSanitizer,
-		private http: HttpClient,
-		private router: Router,
-		permissionService: PermissionService,
-		private rightPanelDialog: H21RightOverlayPanelService)
+		private _http: HttpClient,
+		private _router: Router,
+		private _rightPanelDialog: H21RightOverlayPanelService)
 	{
-		this.permissionService = permissionService;
-		if(this.permissionService.isAuth()) {
-			this.username = this.permissionService.getUsername();
+		this.init();
+		this._router.events.subscribe((event) => {
+			if (event instanceof NavigationEnd) {
+				this.setBreadCrumbs();
+				this.setToolbarActions();
+			}
+		});
+	}
+
+	init() {
+		this.sidenavOpened = false;
+		this.sidebarNavDisabled = false;
+		this.sidebarNavTabs = SIDEBAR_NAV_TABS;
+		this.sidebarNavActiveTab = 'board';
+		this.contentSidenavHasBackdrop = false;
+		this.userName = 'Zucchetti | Marco Montagni';
+		this.userCardData = {
+			user: {
+				name: 'Marco Montagni',
+				email: 'test@viaddi1.it',
+				avatarUrl: './assets/img/avatar.png',
+			},
+			actions: [
+				{
+					name: 	'profile',
+					label:	'My profile',
+					icon:	'person',
+					route:	'',
+					type:	'button'
+				}
+			]
+		};
+	}
+
+	ngAfterContentChecked() {
+		if (this.sidebarNavTabs) {
+			this.sidebarNavActiveTab = this.getSidebarNavTabNameByRoute(this._router.url);
 		}
-		iconReg.addSvgIcon('logo', sanitizer.bypassSecurityTrustResourceUrl('./assets/img/horse21-logo.svg'));
-		iconReg.addSvgIcon('h21_baggage', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/h21-baggage-blue.svg'));
-		iconReg.addSvgIcon('h21_no_baggage', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/h21-no-baggage-gray.svg'));
-		iconReg.addSvgIcon('h21_luggage', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/h21-luggage-blue.svg'));
-		iconReg.addSvgIcon('h21_no_luggage', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/h21-no-luggage-gray.svg'));
-		iconReg.addSvgIcon('h21_night', sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/h21-night-blue.svg'));
+	}
+
+	private getSidebarNavTabNameByRoute(route: string): string {
+		if (this.isTmc()) {
+			this.sidenavOpened = true;
+			return 'tmc';
+		} else if (this.isRoute('userProfile')) {
+			return 'users';
+		}
+		else {
+			let index = this.sidebarNavTabs.findIndex((item) => {
+				return route.indexOf(item.url) >= 0
+			});
+			if (index >= 0) {
+				return this.sidebarNavTabs[index].name;
+			}
+		}
+		return '';
+	}
+
+	sidenavToggle(): void {
+		this.sidenav.toggle();
+		if (this.sidenav.opened) {
+			this.sidenavOpened = true;
+		} else {
+			this.sidenavOpened = false;
+		}
+	}
+
+	sidebarNavAction(tab: ISidebarNavTab): void {
+		if (!this.sidenavOpened && tab.name == 'tmc') {
+			this.sidenavToggle();
+		} else if (this.sidenavOpened && tab.name != 'tmc') {
+			this.sidenavToggle();
+		}
 	}
 
 	prototypeAuth(data: any): void {
@@ -68,27 +141,23 @@ export class AppComponent {
 		];
 	}
 
-	showSidebar(): void {
-		this.sidebar.visibilityToggle();
+	isDemo(): boolean {
+		return this._router.url.indexOf('/demo') == 0;
 	}
 
 	openHelpSection(): void {
-		this.rightPanelDialog.open('h21-help');
-	}
-
-	isDemo(): boolean {
-		return this.router.url.indexOf('/demo') == 0;
+		this._rightPanelDialog.open('h21-help');
 	}
 
 	isRoute(route: string){
-		return this.router.url.indexOf(route) >= 0;
+		return this._router.url.indexOf(route) >= 0;
 	}
 
 	isRoutes(routes: string[]){
-		return routes.some(e => this.router.url.indexOf(e) >= 0);
+		return routes.some(e => this._router.url.indexOf(e) >= 0);
 	}
 
-	isTmc():boolean{
+	isTmc(): boolean {
 		return this.isRoutes([
 			'agencies',
 			'travelers',
@@ -99,8 +168,156 @@ export class AppComponent {
 			'agentProfile',
 			'providerProfile']);
 	}
-	test() {
-		this.router.navigateByUrl('/agencyProfile/1')
-		//this.router.navigate(['/parent/detail']);
+
+	setBreadCrumbs(): void {
+		let url = this._router.url.split('/');
+		this.breadcrumbs = [];
+		if (this.isTmc()) {
+			this.breadcrumbs = [
+				{ label: 'Home', url: '/'},
+				{ label: 'TMC', url: '/agencies'}
+			]
+			switch (url[1]) {
+				case 'agencies':
+				case 'agencyProfile':
+					this.breadcrumbs.push({ label: 'Agencies', url: '/agencies'});
+					break;
+				case 'agents':
+				case 'agentProfile':
+					this.breadcrumbs.push({ label: 'Agents', url: '/agents'});
+					break;
+				case 'providers':
+				case 'providerProfile':
+					this.breadcrumbs.push({ label: 'Providers', url: '/providers'});
+					break;
+				case 'travelers':
+				case 'travelerProfile':
+					this.breadcrumbs.push({ label: 'Travelers', url: '/travelers'});
+					break;
+			}
+			switch (url[1]) {
+				case 'agencyProfile':
+					this.breadcrumbs.push({ label: 'Agency profile', url: '/agencyProfile/1'});
+					break;
+				case 'agentProfile':
+					this.breadcrumbs.push({ label: 'Agent profile', url: '/agentProfile/1'});
+					break;
+				case 'providerProfile':
+					this.breadcrumbs.push({ label: 'Provider profile', url: '/providerProfile/1'});
+					break;
+				case 'travelerProfile':
+					this.breadcrumbs.push({ label: 'Traveler profile', url: '/travelerProfile/1'});
+					break;
+			}
+ 		} else if (this.isRoute('users') || this.isRoute('userProfile'))  {
+			this.breadcrumbs = [
+				{ label: 'Home', url: '/'},
+				{ label: 'Users', url: '/users'},
+			];
+			if (this.isRoute('userProfile')) {
+				this.breadcrumbs.push({ label: 'User profile', url: './userProfile/1'},);
+			}
+		}
+	}
+
+	setToolbarActions(): void {
+		this.toolbarActions = [];
+
+		if (this.isRoute('dashboard')) {
+			this.toolbarActions = [
+				{
+					disabled: false,
+					tooltip: 'Settings',
+					icon: 'tune',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				}
+			];
+		}
+
+		if (this.isRoute('agencies')
+			|| this.isRoute('agents')
+			|| this.isRoute('providers')
+			|| this.isRoute('travelers')
+			|| this.isRoute('users')) {
+			this.toolbarActions = [
+				{
+					disabled: false,
+					tooltip: '',
+					icon: 'view_week',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				}
+			];
+		}
+
+		if (this.isRoute('agencyProfile')
+			|| this.isRoute('agentProfile')
+			|| this.isRoute('providerProfile')
+			|| this.isRoute('travelerProfile')) {
+			this.toolbarActions = [
+				{
+					disabled: false,
+					tooltip: 'Edit',
+					icon: 'edit',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				},
+				{
+					disabled: true,
+					tooltip: 'Update card',
+					icon: 'autorenew',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				},
+				{
+					disabled: false,
+					tooltip: 'Remove',
+					icon: 'delete',
+					style: ['toolbar-action-btn', 'toolbar-action-btn__hover-red'],
+					action: (event) => { }
+				},
+			];
+		}
+
+		if (this.isRoute('userProfile')) {
+			this.toolbarActions = [
+				{
+					disabled: false,
+					tooltip: 'Edit',
+					icon: 'edit',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				},
+				{
+					disabled: true,
+					tooltip: 'Update card',
+					icon: 'autorenew',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				},
+				{
+					disabled: true,
+					tooltip: 'Сonfirm email address',
+					icon: 'email',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				},
+				{
+					disabled: true,
+					tooltip: 'Change password',
+					icon: 'vpn_key',
+					style: ['toolbar-action-btn'],
+					action: (event) => { }
+				},
+				{
+					disabled: false,
+					tooltip: 'Block user',
+					icon: 'block',
+					style: ['toolbar-action-btn', 'toolbar-action-btn__hover-red'],
+					action: (event) => { }
+				},
+			];
+		}
 	}
 }

@@ -7,7 +7,7 @@ import {
 	AppSubscriberService,
 	H21HeaderModule,
 	H21RightOverlayPanelService,
-	H21SidebarModule,
+	H21SidebarNavModule,
 	H21TopToolbarModule,
 	OrderService,
 	PermissionService,
@@ -87,8 +87,8 @@ const routes: Routes = [
 			MatNativeDateModule,
 			NouisliderModule,
 			H21HeaderModule,
-			H21SidebarModule,
 			H21TopToolbarModule,
+			H21SidebarNavModule,
 			ChartsModule
 		],
 		providers: [

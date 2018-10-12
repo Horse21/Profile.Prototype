@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Observable, of as observableOf } from 'rxjs';
-import { City, VocabularyService } from 'h21-be-ui-kit';
-import { HttpClient } from '@angular/common/http';
-import { Passenger } from 'h21-be-ui-kit/dto/passenger';
-import { SearchFlightDto } from 'h21-be-ui-kit/dto/search-flight-dto';
-import { SearchResult } from 'h21-be-ui-kit/dto/search-result';
+import {Injectable} from '@angular/core';
+import {Observable, of as observableOf} from 'rxjs';
+import {City, VocabularyService} from 'h21-be-ui-kit';
+import {HttpClient} from '@angular/common/http';
+import {SearchFlightDto} from 'h21-be-ui-kit/dto/search-flight-dto';
+import {SearchResult} from 'h21-be-ui-kit/dto/search-result';
+import {IHotelInfo, IHotelOption, IHotelSearchOptions, Passenger} from 'h21-be-ui-kit/dto/';
 
 declare var require: any;
 
@@ -350,4 +350,8 @@ export class ProfileVocabularyService implements VocabularyService {
 	searchPassengers(pattern: string): Observable<Passenger[]>{
 		return null;
 	};
+
+	public searchHotels(options: IHotelSearchOptions): Observable<IHotelInfo[]> {
+		return null;
+	}
 }

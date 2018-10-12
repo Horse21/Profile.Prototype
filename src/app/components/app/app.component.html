@@ -1,47 +1,59 @@
-<div class="container-fluid page_box">
+<div class="container-fluid page_box zucchetti mat-typography">
 	<div class="row no-gutters page_header-box">
 		<div class="col-12 no-gutters">
-			<h21-header [isPrototype]="true"
-						(onPrototypeAuth)="prototypeAuth($event)"
-						[username]="username"
-						(onLogout)="logout()"
+			<!--<h21-header [isPrototype]="true"-->
+						<!--(onPrototypeAuth)="prototypeAuth($event)"-->
+						<!--[userName]="userName"-->
+						<!--(onLogout)="logout()"-->
+						<!--[logotypeUrl]="'./assets/img/logo.svg'"-->
+						<!--[notifyList]="getNotifyList()">-->
+			<!--</h21-header>-->
+			<!--<h21-top-toolbar [showBreadcrumbs]="true"-->
+							 <!--[breadcrumbsData]="breadcrumbsData"-->
+							 <!--[showProfileUserCardActions]="true"></h21-top-toolbar>-->
+
+			<h21-header [userName]="userName"
 						[logotypeUrl]="'./assets/img/logo.svg'"
-						[notifyList]="getNotifyList()">
-			</h21-header>
+						[showSearch]="true"
+						[userCardData]="userCardData"
+			></h21-header>
 			<h21-top-toolbar [showBreadcrumbs]="true"
-							 [breadcrumbsData]="breadcrumbsData"
-							 [showProfileUserCardActions]="true"></h21-top-toolbar>
+							 [showSidenavToggle]="false"
+							 [showCart]="false"
+							 [showLanguageControl]="false"
+							 [showCurrencyControl]="false"
+							 [breadcrumbsData]="breadcrumbs"
+							 [buttonsData]="toolbarActions"
+			></h21-top-toolbar>
 		</div>
 	</div>
 	<div class="row no-gutters page_content-box">
-		<div class="col-12 no-gutters __has-sidebar" [class.__has-expanded-sidebar]="isTmc()">
-			<nav class="sidebar_nav">
-				<a mat-button [routerLink]="['/dashboard']" [class.is-active]="isRoute('dashboard')">
-					<mat-icon>apps</mat-icon>
-					<span>Board</span>
-				</a>
-				<a mat-button [routerLink]="['/agencies']" [class.is-active]="isTmc()">
-					<mat-icon>domain</mat-icon>
-					<span>TMC</span>
-				</a>
-				<a mat-button [routerLink]="['/users']" [class.is-active]="isRoutes(['users', 'userProfile'])">
-					<mat-icon>person</mat-icon>
-					<span>Users</span>
-				</a>
-			</nav>
-
-			<nav class="sidebar_expand_nav" [class.__is-active]="isTmc()">
-				<a mat-button [routerLink]="['/agencies']" [class.__is-active]="isRoutes(['agencies', 'agencyProfile'])">Agencies</a>
-				<a mat-button [routerLink]="['/agents']" [class.__is-active]="isRoutes(['agents', 'agentProfile'])">Agents</a>
-				<a mat-button [routerLink]="['/providers']" [class.__is-active]="isRoutes(['providers', 'providerProfile'])">Providers</a>
-				<a mat-button [routerLink]="['/travelers']" [class.__is-active]="isRoutes(['travelers', 'travelerProfile'])">Traveler</a>
-				<!--<a mat-button>Corporate</a>-->
-				<!--<a mat-button>Reports</a>-->
-			</nav>
-
-			<div class="page_content">
-				<router-outlet></router-outlet>
-			</div>
+		<div class="col-12 no-gutters __has-sidebar" [class.__has-active-sidenav]="sidenavOpened">
+			<h21-sidebar-nav [selected]="sidebarNavActiveTab"
+							 [disabled]="sidebarNavDisabled"
+							 [(tabs)]="sidebarNavTabs"
+							 (onChanged)="sidebarNavAction($event)"></h21-sidebar-nav>
+			<mat-sidenav-container [hasBackdrop]="contentSidenavHasBackdrop">
+				<mat-sidenav #sidenav
+							 [position]="'start'"
+							 [mode]="'side'"
+							 [opened]="sidenavOpened"
+							 class="page_left-sidenav">
+					<div class="page_left-sidenav-inner">
+						<nav class="sidebar_expand_nav">
+							<a mat-button [routerLink]="['/agencies']" [class.__is-active]="isRoutes(['agencies', 'agencyProfile'])">Agencies</a>
+							<a mat-button [routerLink]="['/agents']" [class.__is-active]="isRoutes(['agents', 'agentProfile'])">Agents</a>
+							<a mat-button [routerLink]="['/providers']" [class.__is-active]="isRoutes(['providers', 'providerProfile'])">Providers</a>
+							<a mat-button [routerLink]="['/travelers']" [class.__is-active]="isRoutes(['travelers', 'travelerProfile'])">Traveler</a>
+						</nav>
+					</div>
+				</mat-sidenav>
+				<mat-sidenav-content #contentSidenav>
+					<div class="page_content">
+						<router-outlet></router-outlet>
+					</div>
+				</mat-sidenav-content>
+			</mat-sidenav-container>
 		</div>
 	</div>
 </div>
